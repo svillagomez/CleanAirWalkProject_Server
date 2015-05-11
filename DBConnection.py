@@ -11,11 +11,18 @@ class Connection(object):
         return (sql_cursor,sql_connection)
 
     def connect_to_postgres_db(self):
+        # try:
+        #     psgres_connection = psycopg2.connect("dbname='pgrouting_melbourne' "
+        #                                          "user='santiago' "
+        #                                          "host='localhost' "
+        #                                          "password='santy312postgres'")
+        # except:
+        #     print ("I am unable to connect to the database")
         try:
             psgres_connection = psycopg2.connect("dbname='pgrouting_melbourne' "
-                                                 "user='santiago' "
+                                                 "user='postgres' "
                                                  "host='localhost' "
-                                                 "password='santy312postgres'")
+                                                 "password=''")
         except:
             print ("I am unable to connect to the database")
 
