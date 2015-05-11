@@ -1,0 +1,1877 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="b2c6980f-2d1e-4e0a-b3f8-86fe671768fd" name="Default" comment="" />
+    <ignored path="avoid_pollution.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <ignored path=".idea/dataSources.local.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/avoid_pollution$MigrateData.coverage" NAME="MigrateData Coverage Results" MODIFIED="1430652129182" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/avoid_pollution$simple_tests.coverage" NAME="simple_tests Coverage Results" MODIFIED="1431255483755" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/avoid_pollution$HTTPConnection.coverage" NAME="HTTPConnection Coverage Results" MODIFIED="1431268802371" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/avoid_pollution$Server.coverage" NAME="Server Coverage Results" MODIFIED="1429249143578" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/avoid_pollution$PlottingUtil.coverage" NAME="PlottingUtil Coverage Results" MODIFIED="1431185778407" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/avoid_pollution$ClassifyPollution.coverage" NAME="ClassifyPollution Coverage Results" MODIFIED="1429950490833" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/avoid_pollution$Update.coverage" NAME="Update Coverage Results" MODIFIED="1429973189480" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/avoid_pollution$main.coverage" NAME="main Coverage Results" MODIFIED="1431268681695" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DaemonCodeAnalyzer">
+    <disable_hints />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="avoid_pollution" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="MainProgram.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/MainProgram.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="14228" max-vertical-offset="14805">
+              <caret line="976" column="36" selection-start-line="976" selection-start-column="36" selection-end-line="976" selection-end-column="36" />
+              <folding>
+                <element signature="e#43#54#0" expanded="true" />
+                <marker date="1431268796646" expanded="true" signature="501:635" placeholder="SELECT id::i..." />
+                <marker date="1431268796646" expanded="true" signature="1115:1313" placeholder="SELECT DISTI..pgr_astar..." />
+                <marker date="1431268796646" expanded="true" signature="1427:1568" placeholder="SELECT max(x..ways..." />
+                <marker date="1431268796646" expanded="true" signature="1550:1564" placeholder="SELECT * FRO..missing_value..." />
+                <marker date="1431268796646" expanded="true" signature="2497:2532" placeholder="DROP TABLE I..." />
+                <marker date="1431268796646" expanded="true" signature="3145:3240" placeholder="SELECT max(x..ways..." />
+                <marker date="1431268796646" expanded="true" signature="5025:5171" placeholder="SELECT gid,s..ways..." />
+                <marker date="1431268796646" expanded="true" signature="5457:5491" placeholder="SELECT gid F..bounding_box_table..." />
+                <marker date="1431268796646" expanded="true" signature="7197:7266" placeholder="SELECT y1,x1..ways..." />
+                <marker date="1431268796646" expanded="true" signature="7197:7269" placeholder="SELECT y1,x1..ways..." />
+                <marker date="1431268796646" expanded="true" signature="7353:7408" placeholder="SELECT y1,x1..ways..." />
+                <marker date="1431268796646" expanded="true" signature="8234:8280" placeholder="SELECT y1,x1..ways..." />
+                <marker date="1431268796646" expanded="true" signature="8234:8282" placeholder="SELECT y1,x1..ways..." />
+                <marker date="1431268796646" expanded="true" signature="10660:10706" placeholder="SELECT y1,x1..ways..." />
+                <marker date="1431268796646" expanded="true" signature="12504:12593" placeholder="SELECT gid,s..ways..." />
+                <marker date="1431268796646" expanded="true" signature="13124:13313" placeholder="SELECT gid, ..bounding_box_table..." />
+                <marker date="1431268796646" expanded="true" signature="13706:13822" placeholder="SELECT gid,s..ways..." />
+                <marker date="1431268796646" expanded="true" signature="14039:14352" placeholder="SELECT DISTI..." />
+                <marker date="1431268796646" expanded="true" signature="14039:14365" placeholder="SELECT DISTI..." />
+                <marker date="1431268796646" expanded="true" signature="14394:14706" placeholder="SELECT seq, ..pgr_astar..." />
+                <marker date="1431268796646" expanded="true" signature="15975:16358" placeholder="SELECT DISTI..." />
+                <marker date="1431268796646" expanded="true" signature="17060:17081" placeholder="DELETE FROM ..." />
+                <marker date="1431268796646" expanded="true" signature="17172:17329" placeholder="SELECT id,la..measurements..." />
+                <marker date="1431268796646" expanded="true" signature="17761:17840" placeholder="INSERT INTO ..." />
+                <marker date="1431268796646" expanded="true" signature="18044:18067" placeholder="DELETE FROM ..." />
+                <marker date="1431268796646" expanded="true" signature="18159:18234" placeholder="SELECT gid,s..ways..." />
+                <marker date="1431268796646" expanded="true" signature="18599:18744" placeholder="INSERT INTO ..." />
+                <marker date="1431268796646" expanded="true" signature="19421:19517" placeholder="SELECT gid, ..measurements..." />
+                <marker date="1431268796646" expanded="true" signature="20793:21106" placeholder="SELECT DISTI..." />
+                <marker date="1431268796646" expanded="true" signature="21171:21212" placeholder="UPDATE ways ..." />
+                <marker date="1431268796646" expanded="true" signature="23537:23854" placeholder="SELECT DISTI..." />
+                <marker date="1431268796646" expanded="true" signature="23926:24003" placeholder="SELECT gid,t..buffer_geometry_table..." />
+                <marker date="1431268796646" expanded="true" signature="24826:24886" placeholder="UPDATE buffe..." />
+                <marker date="1431268796646" expanded="true" signature="25012:25072" placeholder="UPDATE buffe..." />
+                <marker date="1431268796646" expanded="true" signature="25201:25261" placeholder="UPDATE buffe..." />
+                <marker date="1431268796646" expanded="true" signature="25385:25445" placeholder="UPDATE buffe..." />
+                <marker date="1431268796646" expanded="true" signature="25558:25619" placeholder="UPDATE buffe..." />
+                <marker date="1431268796646" expanded="true" signature="25734:25794" placeholder="UPDATE buffe..." />
+                <marker date="1431268796646" expanded="true" signature="25912:25972" placeholder="UPDATE buffe..." />
+                <marker date="1431268796646" expanded="true" signature="26085:26146" placeholder="UPDATE buffe..." />
+                <marker date="1431268796646" expanded="true" signature="26506:26577" placeholder="SELECT sourc..buffer_geometry_table..." />
+                <marker date="1431268796646" expanded="true" signature="27380:27427" placeholder="SELECT sourc..buffer_geometry_table..." />
+                <marker date="1431268796646" expanded="true" signature="27728:27761" placeholder="DELETE FROM ..." />
+                <marker date="1431268796646" expanded="true" signature="27728:27781" placeholder="DELETE FROM ..." />
+                <marker date="1431268796646" expanded="true" signature="27728:27782" placeholder="DELETE FROM ..." />
+                <marker date="1431268796646" expanded="true" signature="27874:27928" placeholder="DELETE FROM ..." />
+                <marker date="1431268796646" expanded="true" signature="28190:28225" placeholder="SELECT * FRO..buffer_geometry_table..." />
+                <marker date="1431268796646" expanded="true" signature="28190:28247" placeholder="SELECT * FRO..buffer_geometry_table..." />
+                <marker date="1431268796646" expanded="true" signature="28266:28301" placeholder="SELECT * FRO..buffer_geometry_table..." />
+                <marker date="1431268796646" expanded="true" signature="28953:29270" placeholder="SELECT DISTI..." />
+                <marker date="1431268796646" expanded="true" signature="29349:29472" placeholder="SELECT gid A..." />
+                <marker date="1431268796646" expanded="true" signature="29673:29811" placeholder="SELECT gid A..." />
+                <marker date="1431268796646" expanded="true" signature="29673:29812" placeholder="SELECT gid A..." />
+                <marker date="1431268796646" expanded="true" signature="29911:30050" placeholder="SELECT gid A..." />
+                <marker date="1431268796646" expanded="true" signature="30162:30472" placeholder="SELECT DISTI..." />
+                <marker date="1431268796646" expanded="true" signature="30162:30485" placeholder="SELECT DISTI..." />
+                <marker date="1431268796646" expanded="true" signature="30576:30842" placeholder="SELECT seq, ..pgr_astar..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PlottingUtil.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PlottingUtil.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="1799" max-vertical-offset="3450">
+              <caret line="135" column="24" selection-start-line="135" selection-start-column="24" selection-end-line="135" selection-end-column="24" />
+              <folding>
+                <element signature="e#24#56#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HTTPConnection.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/HTTPConnection.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.29535866" vertical-offset="90" max-vertical-offset="2400">
+              <caret line="20" column="41" selection-start-line="20" selection-start-column="41" selection-end-line="20" selection-end-column="41" />
+              <folding>
+                <element signature="e#24#85#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BaseHTTPServer.py" pinned="false" current-in-tab="false">
+        <entry file="file:///usr/lib/python2.7/BaseHTTPServer.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="853" max-vertical-offset="9090">
+              <caret line="107" column="0" selection-start-line="107" selection-start-column="0" selection-end-line="107" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MigrateData.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/MigrateData.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="45" max-vertical-offset="1125">
+              <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+              <folding>
+                <element signature="e#25#51#0" expanded="true" />
+                <marker date="1430115134807" expanded="true" signature="229:266" placeholder="SELECT max(i..measurements..." />
+                <marker date="1430115134807" expanded="true" signature="506:560" placeholder="SELECT id FR..streams..." />
+                <marker date="1430115134807" expanded="true" signature="506:562" placeholder="SELECT id FR..streams..." />
+                <marker date="1430115134807" expanded="true" signature="951:1089" placeholder="SELECT id,la..." />
+                <marker date="1430115134807" expanded="true" signature="1139:1267" placeholder="SELECT id,la..." />
+                <marker date="1430115134807" expanded="true" signature="1148:1267" placeholder="SELECT id,la..." />
+                <marker date="1430115134807" expanded="true" signature="1640:1782" placeholder="INSERT INTO ..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Distance.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Distance.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="159" max-vertical-offset="645">
+              <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UpdatePolygons.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/UpdatePolygons.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="344" max-vertical-offset="3030">
+              <caret line="34" column="40" selection-start-line="34" selection-start-column="40" selection-end-line="34" selection-end-column="40" />
+              <folding>
+                <element signature="e#24#35#0" expanded="true" />
+                <marker date="1429945574282" expanded="true" signature="831:843" placeholder="ALTER TABLE missing_value..." />
+                <marker date="1429945574282" expanded="true" signature="831:868" placeholder="ALTER TABLE ..DROP..." />
+                <marker date="1429945574282" expanded="true" signature="1155:1206" placeholder="ALTER TABLE ..ADD..." />
+                <marker date="1429945574282" expanded="true" signature="1728:1743" placeholder="SELECT gid f..." />
+                <marker date="1429945574282" expanded="true" signature="1728:1744" placeholder="SELECT gid f..missing_value..." />
+                <marker date="1429945574282" expanded="true" signature="1728:1746" placeholder="SELECT gid f..missing_value..." />
+                <marker date="1429945574282" expanded="true" signature="1955:1979" placeholder="SELECT y1,x1..missing_value..." />
+                <marker date="1429945574282" expanded="true" signature="1955:1993" placeholder="SELECT y1,x1..missing_value..." />
+                <marker date="1429945574282" expanded="true" signature="1955:1994" placeholder="SELECT y1,x1..missing_value..." />
+                <marker date="1429945574282" expanded="true" signature="2139:2278" placeholder="UPDATE missi..." />
+                <marker date="1429945574282" expanded="true" signature="2139:2279" placeholder="UPDATE ways ..." />
+                <marker date="1429945574282" expanded="true" signature="3373:3402" placeholder="SELECT gid f..ways..." />
+                <marker date="1429945574282" expanded="true" signature="3426:3579" placeholder="UPDATE ways ..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="simple_tests.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/simple_tests.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="1701" max-vertical-offset="2190">
+              <caret line="129" column="33" selection-start-line="128" selection-start-column="0" selection-end-line="129" selection-end-column="33" />
+              <folding>
+                <element signature="e#24#35#0" expanded="true" />
+                <marker date="1431255483749" expanded="true" signature="304:360" placeholder="SELECT y1,x1..ways..." />
+                <marker date="1431255483749" expanded="true" signature="2053:2235" placeholder="SELECT gid,S..ways..." />
+                <marker date="1431255483749" expanded="true" signature="2262:2382" placeholder="SELECT gid,S..ways..." />
+                <marker date="1431255483749" expanded="true" signature="2765:2805" placeholder="SELECT y1,x1..ways..." />
+                <marker date="1431255483749" expanded="true" signature="2765:2806" placeholder="SELECT y1,x1..ways..." />
+                <marker date="1431255483749" expanded="true" signature="3077:3229" placeholder="SELECT gid,S..ways..." />
+                <marker date="1431255483749" expanded="true" signature="3363:3489" placeholder="SELECT id::i..." />
+                <marker date="1431255483749" expanded="true" signature="3509:3663" placeholder="SELECT gid,S..ways..." />
+                <marker date="1431255483749" expanded="true" signature="3865:3906" placeholder="SELECT y1,x1..ways..." />
+                <marker date="1431255483749" expanded="true" signature="3865:3907" placeholder="SELECT y1,x1..ways..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Server.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Server.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="432" max-vertical-offset="1005">
+              <caret line="30" column="20" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="20" />
+              <folding>
+                <element signature="e#26#84#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Server.py" />
+        <option value="$PROJECT_DIR$/Update.py" />
+        <option value="$PROJECT_DIR$/Constants.py" />
+        <option value="$PROJECT_DIR$/main.py" />
+        <option value="$PROJECT_DIR$/ClassifyPollution.py" />
+        <option value="$PROJECT_DIR$/DBConnection.py" />
+        <option value="$PROJECT_DIR$/MigrateData.py" />
+        <option value="$PROJECT_DIR$/Distance.py" />
+        <option value="$PROJECT_DIR$/PlottingUtil.py" />
+        <option value="$PROJECT_DIR$/simple_tests.py" />
+        <option value="$PROJECT_DIR$/HTTPConnection.py" />
+        <option value="$PROJECT_DIR$/MainProgram.py" />
+      </list>
+    </option>
+  </component>
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="y" value="24" />
+    <option name="width" value="800" />
+    <option name="height" value="876" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>Buildout</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="avoid_pollution" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="avoid_pollution" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="avoid_pollution" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="recentsLimit" value="5" />
+    <property name="options.lastSelected" value="editor.preferences.appearance" />
+    <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="FullScreen" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../University_of_Melbourne/Semester_4/Cluster_and_Cloud_computing/Assignment_2/ResourceFiles" />
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///usr/lib/python2.7/socket.py" />
+  </component>
+  <component name="PyConsoleOptionsProvider">
+    <option name="myPythonConsoleState">
+      <console-settings />
+    </option>
+  </component>
+  <component name="RunManager" selected="Python.HTTPConnection">
+    <configuration default="false" name="simple_tests" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="avoid_pollution" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/simple_tests.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <RunnerSettings RunnerId="PyDebugRunner" />
+      <RunnerSettings RunnerId="PythonRunner" />
+      <ConfigurationWrapper RunnerId="PyDebugRunner" />
+      <ConfigurationWrapper RunnerId="PythonRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="MigrateData" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="avoid_pollution" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/MigrateData.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <RunnerSettings RunnerId="PyDebugRunner" />
+      <RunnerSettings RunnerId="PythonRunner" />
+      <ConfigurationWrapper RunnerId="PyDebugRunner" />
+      <ConfigurationWrapper RunnerId="PythonRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="HTTPConnection" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="avoid_pollution" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/HTTPConnection.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <RunnerSettings RunnerId="PythonRunner" />
+      <ConfigurationWrapper RunnerId="PythonRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="PlottingUtil" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="avoid_pollution" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/PlottingUtil.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <RunnerSettings RunnerId="PyDebugRunner" />
+      <RunnerSettings RunnerId="PythonRunner" />
+      <ConfigurationWrapper RunnerId="PyDebugRunner" />
+      <ConfigurationWrapper RunnerId="PythonRunner" />
+      <method />
+    </configuration>
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="avoid_pollution" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="PyBehaveRunConfigurationType" factoryName="Behave">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="avoid_pollution" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="ADDITIONAL_ARGS" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Unittests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="avoid_pollution" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="py.test">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="avoid_pollution" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="testToRun" value="" />
+      <option name="keywords" value="" />
+      <option name="params" value="" />
+      <option name="USE_PARAM" value="false" />
+      <option name="USE_KEYWORD" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="PyLettuceRunConfigurationType" factoryName="Lettuce">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="avoid_pollution" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="ADDITIONAL_ARGS" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Attests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="avoid_pollution" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Doctests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="avoid_pollution" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="DjangoTestsConfigurationType" factoryName="Django tests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="avoid_pollution" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="TARGET" value="" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Nosetests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="avoid_pollution" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <pass-parent-envs>true</pass-parent-envs>
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="main" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="avoid_pollution" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/MainProgram.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <RunnerSettings RunnerId="PyDebugRunner" />
+      <RunnerSettings RunnerId="PythonCover" />
+      <RunnerSettings RunnerId="PythonRunner" />
+      <ConfigurationWrapper RunnerId="PyDebugRunner" />
+      <ConfigurationWrapper RunnerId="PythonCover" />
+      <ConfigurationWrapper RunnerId="PythonRunner" />
+      <method />
+    </configuration>
+    <list size="5">
+      <item index="0" class="java.lang.String" itemvalue="Python.main" />
+      <item index="1" class="java.lang.String" itemvalue="Python.simple_tests" />
+      <item index="2" class="java.lang.String" itemvalue="Python.MigrateData" />
+      <item index="3" class="java.lang.String" itemvalue="Python.HTTPConnection" />
+      <item index="4" class="java.lang.String" itemvalue="Python.PlottingUtil" />
+    </list>
+    <recent_temporary>
+      <list size="4">
+        <item index="0" class="java.lang.String" itemvalue="Python.HTTPConnection" />
+        <item index="1" class="java.lang.String" itemvalue="Python.simple_tests" />
+        <item index="2" class="java.lang.String" itemvalue="Python.PlottingUtil" />
+        <item index="3" class="java.lang.String" itemvalue="Python.MigrateData" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b2c6980f-2d1e-4e0a-b3f8-86fe671768fd" name="Default" comment="" />
+      <created>1429096528778</created>
+      <option name="number" value="Default" />
+      <updated>1429096528778</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TodoView" selected-index="0">
+    <todo-panel id="selected-file">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="false" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="false" />
+    </todo-panel>
+    <todo-panel id="default-changelist">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="false" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="24" width="800" height="876" extended-state="4" />
+    <editor active="false" />
+    <layout>
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.09416445" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32934928" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32934928" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32934928" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4693028" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32138285" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1925078" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="myTodoPanelSettings">
+      <TodoPanelSettings />
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/MainProgram.py</url>
+          <line>176</line>
+          <option name="timeStamp" value="174" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/MainProgram.py</url>
+          <line>342</line>
+          <option name="timeStamp" value="175" />
+        </line-breakpoint>
+      </breakpoints>
+      <breakpoints-dialog>
+        <breakpoints-dialog />
+      </breakpoints-dialog>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
+      <option name="time" value="176" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/UpdatePolygons.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2727" max-vertical-offset="3165">
+          <caret line="97" column="20" selection-start-line="97" selection-start-column="20" selection-end-line="97" selection-end-column="20" />
+          <folding>
+            <element signature="e#24#35#0" expanded="true" />
+            <marker date="1429945574282" expanded="true" signature="831:843" placeholder="ALTER TABLE missing_value..." />
+            <marker date="1429945574282" expanded="true" signature="831:868" placeholder="ALTER TABLE ..DROP..." />
+            <marker date="1429945574282" expanded="true" signature="1155:1206" placeholder="ALTER TABLE ..ADD..." />
+            <marker date="1429945574282" expanded="true" signature="1728:1743" placeholder="SELECT gid f..." />
+            <marker date="1429945574282" expanded="true" signature="1728:1744" placeholder="SELECT gid f..missing_value..." />
+            <marker date="1429945574282" expanded="true" signature="1728:1746" placeholder="SELECT gid f..missing_value..." />
+            <marker date="1429945574282" expanded="true" signature="1955:1979" placeholder="SELECT y1,x1..missing_value..." />
+            <marker date="1429945574282" expanded="true" signature="1955:1993" placeholder="SELECT y1,x1..missing_value..." />
+            <marker date="1429945574282" expanded="true" signature="1955:1994" placeholder="SELECT y1,x1..missing_value..." />
+            <marker date="1429945574282" expanded="true" signature="2139:2278" placeholder="UPDATE missi..." />
+            <marker date="1429945574282" expanded="true" signature="2139:2279" placeholder="UPDATE ways ..." />
+            <marker date="1429945574282" expanded="true" signature="3373:3402" placeholder="SELECT gid f..ways..." />
+            <marker date="1429945574282" expanded="true" signature="3426:3579" placeholder="UPDATE ways ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/simple_tests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="225">
+          <caret line="7" column="11" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
+          <folding>
+            <element signature="e#24#35#0" expanded="true" />
+            <marker date="1431255483749" expanded="true" signature="304:360" placeholder="SELECT y1,x1..ways..." />
+            <marker date="1431255483749" expanded="true" signature="2053:2235" placeholder="SELECT gid,S..ways..." />
+            <marker date="1431255483749" expanded="true" signature="2262:2382" placeholder="SELECT gid,S..ways..." />
+            <marker date="1431255483749" expanded="true" signature="2765:2805" placeholder="SELECT y1,x1..ways..." />
+            <marker date="1431255483749" expanded="true" signature="2765:2806" placeholder="SELECT y1,x1..ways..." />
+            <marker date="1431255483749" expanded="true" signature="3077:3229" placeholder="SELECT gid,S..ways..." />
+            <marker date="1431255483749" expanded="true" signature="3363:3489" placeholder="SELECT id::i..." />
+            <marker date="1431255483749" expanded="true" signature="3509:3663" placeholder="SELECT gid,S..ways..." />
+            <marker date="1431255483749" expanded="true" signature="3865:3906" placeholder="SELECT y1,x1..ways..." />
+            <marker date="1431255483749" expanded="true" signature="3865:3907" placeholder="SELECT y1,x1..ways..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Distance.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="615">
+          <caret line="18" column="61" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Server.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="450" max-vertical-offset="1005">
+          <caret line="30" column="20" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="20" />
+          <folding>
+            <element signature="e#26#84#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MainProgram.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3660">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#43#54#0" expanded="true" />
+            <marker date="1431268796646" expanded="true" signature="501:635" placeholder="SELECT id::i..." />
+            <marker date="1431268796646" expanded="true" signature="1115:1313" placeholder="SELECT DISTI..pgr_astar..." />
+            <marker date="1431268796646" expanded="true" signature="1427:1568" placeholder="SELECT max(x..ways..." />
+            <marker date="1431268796646" expanded="true" signature="1550:1564" placeholder="SELECT * FRO..missing_value..." />
+            <marker date="1431268796646" expanded="true" signature="2497:2532" placeholder="DROP TABLE I..." />
+            <marker date="1431268796646" expanded="true" signature="3145:3240" placeholder="SELECT max(x..ways..." />
+            <marker date="1431268796646" expanded="true" signature="5025:5171" placeholder="SELECT gid,s..ways..." />
+            <marker date="1431268796646" expanded="true" signature="5457:5491" placeholder="SELECT gid F..bounding_box_table..." />
+            <marker date="1431268796646" expanded="true" signature="7197:7266" placeholder="SELECT y1,x1..ways..." />
+            <marker date="1431268796646" expanded="true" signature="7197:7269" placeholder="SELECT y1,x1..ways..." />
+            <marker date="1431268796646" expanded="true" signature="7353:7408" placeholder="SELECT y1,x1..ways..." />
+            <marker date="1431268796646" expanded="true" signature="8234:8280" placeholder="SELECT y1,x1..ways..." />
+            <marker date="1431268796646" expanded="true" signature="8234:8282" placeholder="SELECT y1,x1..ways..." />
+            <marker date="1431268796646" expanded="true" signature="10660:10706" placeholder="SELECT y1,x1..ways..." />
+            <marker date="1431268796646" expanded="true" signature="12504:12593" placeholder="SELECT gid,s..ways..." />
+            <marker date="1431268796646" expanded="true" signature="13124:13313" placeholder="SELECT gid, ..bounding_box_table..." />
+            <marker date="1431268796646" expanded="true" signature="13706:13822" placeholder="SELECT gid,s..ways..." />
+            <marker date="1431268796646" expanded="true" signature="14039:14352" placeholder="SELECT DISTI..." />
+            <marker date="1431268796646" expanded="true" signature="14039:14365" placeholder="SELECT DISTI..." />
+            <marker date="1431268796646" expanded="true" signature="14394:14706" placeholder="SELECT seq, ..pgr_astar..." />
+            <marker date="1431268796646" expanded="true" signature="15975:16358" placeholder="SELECT DISTI..." />
+            <marker date="1431268796646" expanded="true" signature="17060:17081" placeholder="DELETE FROM ..." />
+            <marker date="1431268796646" expanded="true" signature="17172:17329" placeholder="SELECT id,la..measurements..." />
+            <marker date="1431268796646" expanded="true" signature="17761:17840" placeholder="INSERT INTO ..." />
+            <marker date="1431268796646" expanded="true" signature="18044:18067" placeholder="DELETE FROM ..." />
+            <marker date="1431268796646" expanded="true" signature="18159:18234" placeholder="SELECT gid,s..ways..." />
+            <marker date="1431268796646" expanded="true" signature="18599:18744" placeholder="INSERT INTO ..." />
+            <marker date="1431268796646" expanded="true" signature="19421:19517" placeholder="SELECT gid, ..measurements..." />
+            <marker date="1431268796646" expanded="true" signature="20793:21106" placeholder="SELECT DISTI..." />
+            <marker date="1431268796646" expanded="true" signature="21171:21212" placeholder="UPDATE ways ..." />
+            <marker date="1431268796646" expanded="true" signature="23537:23854" placeholder="SELECT DISTI..." />
+            <marker date="1431268796646" expanded="true" signature="23926:24003" placeholder="SELECT gid,t..buffer_geometry_table..." />
+            <marker date="1431268796646" expanded="true" signature="24826:24886" placeholder="UPDATE buffe..." />
+            <marker date="1431268796646" expanded="true" signature="25012:25072" placeholder="UPDATE buffe..." />
+            <marker date="1431268796646" expanded="true" signature="25201:25261" placeholder="UPDATE buffe..." />
+            <marker date="1431268796646" expanded="true" signature="25385:25445" placeholder="UPDATE buffe..." />
+            <marker date="1431268796646" expanded="true" signature="25558:25619" placeholder="UPDATE buffe..." />
+            <marker date="1431268796646" expanded="true" signature="25734:25794" placeholder="UPDATE buffe..." />
+            <marker date="1431268796646" expanded="true" signature="25912:25972" placeholder="UPDATE buffe..." />
+            <marker date="1431268796646" expanded="true" signature="26085:26146" placeholder="UPDATE buffe..." />
+            <marker date="1431268796646" expanded="true" signature="26506:26577" placeholder="SELECT sourc..buffer_geometry_table..." />
+            <marker date="1431268796646" expanded="true" signature="27380:27427" placeholder="SELECT sourc..buffer_geometry_table..." />
+            <marker date="1431268796646" expanded="true" signature="27728:27761" placeholder="DELETE FROM ..." />
+            <marker date="1431268796646" expanded="true" signature="27728:27781" placeholder="DELETE FROM ..." />
+            <marker date="1431268796646" expanded="true" signature="27728:27782" placeholder="DELETE FROM ..." />
+            <marker date="1431268796646" expanded="true" signature="27874:27928" placeholder="DELETE FROM ..." />
+            <marker date="1431268796646" expanded="true" signature="28190:28225" placeholder="SELECT * FRO..buffer_geometry_table..." />
+            <marker date="1431268796646" expanded="true" signature="28190:28247" placeholder="SELECT * FRO..buffer_geometry_table..." />
+            <marker date="1431268796646" expanded="true" signature="28266:28301" placeholder="SELECT * FRO..buffer_geometry_table..." />
+            <marker date="1431268796646" expanded="true" signature="28953:29270" placeholder="SELECT DISTI..." />
+            <marker date="1431268796646" expanded="true" signature="29349:29472" placeholder="SELECT gid A..." />
+            <marker date="1431268796646" expanded="true" signature="29673:29811" placeholder="SELECT gid A..." />
+            <marker date="1431268796646" expanded="true" signature="29673:29812" placeholder="SELECT gid A..." />
+            <marker date="1431268796646" expanded="true" signature="29911:30050" placeholder="SELECT gid A..." />
+            <marker date="1431268796646" expanded="true" signature="30162:30472" placeholder="SELECT DISTI..." />
+            <marker date="1431268796646" expanded="true" signature="30162:30485" placeholder="SELECT DISTI..." />
+            <marker date="1431268796646" expanded="true" signature="30576:30842" placeholder="SELECT seq, ..pgr_astar..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Constants.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="180">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/UpdatePolygons.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2744" max-vertical-offset="3165">
+          <caret line="195" column="76" selection-start-line="195" selection-start-column="76" selection-end-line="195" selection-end-column="76" />
+          <folding>
+            <element signature="e#24#35#0" expanded="true" />
+            <marker date="1429945574282" expanded="true" signature="831:843" placeholder="ALTER TABLE missing_value..." />
+            <marker date="1429945574282" expanded="true" signature="831:868" placeholder="ALTER TABLE ..DROP..." />
+            <marker date="1429945574282" expanded="true" signature="1155:1206" placeholder="ALTER TABLE ..ADD..." />
+            <marker date="1429945574282" expanded="true" signature="1728:1743" placeholder="SELECT gid f..." />
+            <marker date="1429945574282" expanded="true" signature="1728:1744" placeholder="SELECT gid f..missing_value..." />
+            <marker date="1429945574282" expanded="true" signature="1728:1746" placeholder="SELECT gid f..missing_value..." />
+            <marker date="1429945574282" expanded="true" signature="1955:1979" placeholder="SELECT y1,x1..missing_value..." />
+            <marker date="1429945574282" expanded="true" signature="1955:1993" placeholder="SELECT y1,x1..missing_value..." />
+            <marker date="1429945574282" expanded="true" signature="1955:1994" placeholder="SELECT y1,x1..missing_value..." />
+            <marker date="1429945574282" expanded="true" signature="2139:2278" placeholder="UPDATE missi..." />
+            <marker date="1429945574282" expanded="true" signature="2139:2279" placeholder="UPDATE ways ..." />
+            <marker date="1429945574282" expanded="true" signature="3373:3402" placeholder="SELECT gid f..ways..." />
+            <marker date="1429945574282" expanded="true" signature="3426:3579" placeholder="UPDATE ways ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/simple_tests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="225">
+          <caret line="7" column="11" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
+          <folding>
+            <element signature="e#24#35#0" expanded="true" />
+            <marker date="1431255483749" expanded="true" signature="304:360" placeholder="SELECT y1,x1..ways..." />
+            <marker date="1431255483749" expanded="true" signature="2053:2235" placeholder="SELECT gid,S..ways..." />
+            <marker date="1431255483749" expanded="true" signature="2262:2382" placeholder="SELECT gid,S..ways..." />
+            <marker date="1431255483749" expanded="true" signature="2765:2805" placeholder="SELECT y1,x1..ways..." />
+            <marker date="1431255483749" expanded="true" signature="2765:2806" placeholder="SELECT y1,x1..ways..." />
+            <marker date="1431255483749" expanded="true" signature="3077:3229" placeholder="SELECT gid,S..ways..." />
+            <marker date="1431255483749" expanded="true" signature="3363:3489" placeholder="SELECT id::i..." />
+            <marker date="1431255483749" expanded="true" signature="3509:3663" placeholder="SELECT gid,S..ways..." />
+            <marker date="1431255483749" expanded="true" signature="3865:3906" placeholder="SELECT y1,x1..ways..." />
+            <marker date="1431255483749" expanded="true" signature="3865:3907" placeholder="SELECT y1,x1..ways..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Distance.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="615">
+          <caret line="18" column="61" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Server.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="450" max-vertical-offset="1005">
+          <caret line="30" column="20" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="20" />
+          <folding>
+            <element signature="e#26#84#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MainProgram.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="3195" max-vertical-offset="3285">
+          <caret line="213" column="49" selection-start-line="213" selection-start-column="49" selection-end-line="213" selection-end-column="49" />
+          <folding>
+            <element signature="e#43#54#0" expanded="true" />
+            <marker date="1431268796646" expanded="true" signature="501:635" placeholder="SELECT id::i..." />
+            <marker date="1431268796646" expanded="true" signature="1115:1313" placeholder="SELECT DISTI..pgr_astar..." />
+            <marker date="1431268796646" expanded="true" signature="1427:1568" placeholder="SELECT max(x..ways..." />
+            <marker date="1431268796646" expanded="true" signature="1550:1564" placeholder="SELECT * FRO..missing_value..." />
+            <marker date="1431268796646" expanded="true" signature="2497:2532" placeholder="DROP TABLE I..." />
+            <marker date="1431268796646" expanded="true" signature="3145:3240" placeholder="SELECT max(x..ways..." />
+            <marker date="1431268796646" expanded="true" signature="5025:5171" placeholder="SELECT gid,s..ways..." />
+            <marker date="1431268796646" expanded="true" signature="5457:5491" placeholder="SELECT gid F..bounding_box_table..." />
+            <marker date="1431268796646" expanded="true" signature="7197:7266" placeholder="SELECT y1,x1..ways..." />
+            <marker date="1431268796646" expanded="true" signature="7197:7269" placeholder="SELECT y1,x1..ways..." />
+            <marker date="1431268796646" expanded="true" signature="7353:7408" placeholder="SELECT y1,x1..ways..." />
+            <marker date="1431268796646" expanded="true" signature="8234:8280" placeholder="SELECT y1,x1..ways..." />
+            <marker date="1431268796646" expanded="true" signature="8234:8282" placeholder="SELECT y1,x1..ways..." />
+            <marker date="1431268796646" expanded="true" signature="10660:10706" placeholder="SELECT y1,x1..ways..." />
+            <marker date="1431268796646" expanded="true" signature="12504:12593" placeholder="SELECT gid,s..ways..." />
+            <marker date="1431268796646" expanded="true" signature="13124:13313" placeholder="SELECT gid, ..bounding_box_table..." />
+            <marker date="1431268796646" expanded="true" signature="13706:13822" placeholder="SELECT gid,s..ways..." />
+            <marker date="1431268796646" expanded="true" signature="14039:14352" placeholder="SELECT DISTI..." />
+            <marker date="1431268796646" expanded="true" signature="14039:14365" placeholder="SELECT DISTI..." />
+            <marker date="1431268796646" expanded="true" signature="14394:14706" placeholder="SELECT seq, ..pgr_astar..." />
+            <marker date="1431268796646" expanded="true" signature="15975:16358" placeholder="SELECT DISTI..." />
+            <marker date="1431268796646" expanded="true" signature="17060:17081" placeholder="DELETE FROM ..." />
+            <marker date="1431268796646" expanded="true" signature="17172:17329" placeholder="SELECT id,la..measurements..." />
+            <marker date="1431268796646" expanded="true" signature="17761:17840" placeholder="INSERT INTO ..." />
+            <marker date="1431268796646" expanded="true" signature="18044:18067" placeholder="DELETE FROM ..." />
+            <marker date="1431268796646" expanded="true" signature="18159:18234" placeholder="SELECT gid,s..ways..." />
+            <marker date="1431268796646" expanded="true" signature="18599:18744" placeholder="INSERT INTO ..." />
+            <marker date="1431268796646" expanded="true" signature="19421:19517" placeholder="SELECT gid, ..measurements..." />
+            <marker date="1431268796646" expanded="true" signature="20793:21106" placeholder="SELECT DISTI..." />
+            <marker date="1431268796646" expanded="true" signature="21171:21212" placeholder="UPDATE ways ..." />
+            <marker date="1431268796646" expanded="true" signature="23537:23854" placeholder="SELECT DISTI..." />
+            <marker date="1431268796646" expanded="true" signature="23926:24003" placeholder="SELECT gid,t..buffer_geometry_table..." />
+            <marker date="1431268796646" expanded="true" signature="24826:24886" placeholder="UPDATE buffe..." />
+            <marker date="1431268796646" expanded="true" signature="25012:25072" placeholder="UPDATE buffe..." />
+            <marker date="1431268796646" expanded="true" signature="25201:25261" placeholder="UPDATE buffe..." />
+            <marker date="1431268796646" expanded="true" signature="25385:25445" placeholder="UPDATE buffe..." />
+            <marker date="1431268796646" expanded="true" signature="25558:25619" placeholder="UPDATE buffe..." />
+            <marker date="1431268796646" expanded="true" signature="25734:25794" placeholder="UPDATE buffe..." />
+            <marker date="1431268796646" expanded="true" signature="25912:25972" placeholder="UPDATE buffe..." />
+            <marker date="1431268796646" expanded="true" signature="26085:26146" placeholder="UPDATE buffe..." />
+            <marker date="1431268796646" expanded="true" signature="26506:26577" placeholder="SELECT sourc..buffer_geometry_table..." />
+            <marker date="1431268796646" expanded="true" signature="27380:27427" placeholder="SELECT sourc..buffer_geometry_table..." />
+            <marker date="1431268796646" expanded="true" signature="27728:27761" placeholder="DELETE FROM ..." />
+            <marker date="1431268796646" expanded="true" signature="27728:27781" placeholder="DELETE FROM ..." />
+            <marker date="1431268796646" expanded="true" signature="27728:27782" placeholder="DELETE FROM ..." />
+            <marker date="1431268796646" expanded="true" signature="27874:27928" placeholder="DELETE FROM ..." />
+            <marker date="1431268796646" expanded="true" signature="28190:28225" placeholder="SELECT * FRO..buffer_geometry_table..." />
+            <marker date="1431268796646" expanded="true" signature="28190:28247" placeholder="SELECT * FRO..buffer_geometry_table..." />
+            <marker date="1431268796646" expanded="true" signature="28266:28301" placeholder="SELECT * FRO..buffer_geometry_table..." />
+            <marker date="1431268796646" expanded="true" signature="28953:29270" placeholder="SELECT DISTI..." />
+            <marker date="1431268796646" expanded="true" signature="29349:29472" placeholder="SELECT gid A..." />
+            <marker date="1431268796646" expanded="true" signature="29673:29811" placeholder="SELECT gid A..." />
+            <marker date="1431268796646" expanded="true" signature="29673:29812" placeholder="SELECT gid A..." />
+            <marker date="1431268796646" expanded="true" signature="29911:30050" placeholder="SELECT gid A..." />
+            <marker date="1431268796646" expanded="true" signature="30162:30472" placeholder="SELECT DISTI..." />
+            <marker date="1431268796646" expanded="true" signature="30162:30485" placeholder="SELECT DISTI..." />
+            <marker date="1431268796646" expanded="true" signature="30576:30842" placeholder="SELECT seq, ..pgr_astar..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/UpdatePolygons.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3000">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#24#35#0" expanded="true" />
+            <marker date="1429945574282" expanded="true" signature="831:843" placeholder="ALTER TABLE missing_value..." />
+            <marker date="1429945574282" expanded="true" signature="831:868" placeholder="ALTER TABLE ..DROP..." />
+            <marker date="1429945574282" expanded="true" signature="1155:1206" placeholder="ALTER TABLE ..ADD..." />
+            <marker date="1429945574282" expanded="true" signature="1728:1743" placeholder="SELECT gid f..." />
+            <marker date="1429945574282" expanded="true" signature="1728:1744" placeholder="SELECT gid f..missing_value..." />
+            <marker date="1429945574282" expanded="true" signature="1728:1746" placeholder="SELECT gid f..missing_value..." />
+            <marker date="1429945574282" expanded="true" signature="1955:1979" placeholder="SELECT y1,x1..missing_value..." />
+            <marker date="1429945574282" expanded="true" signature="1955:1993" placeholder="SELECT y1,x1..missing_value..." />
+            <marker date="1429945574282" expanded="true" signature="1955:1994" placeholder="SELECT y1,x1..missing_value..." />
+            <marker date="1429945574282" expanded="true" signature="2139:2278" placeholder="UPDATE missi..." />
+            <marker date="1429945574282" expanded="true" signature="2139:2279" placeholder="UPDATE ways ..." />
+            <marker date="1429945574282" expanded="true" signature="3373:3402" placeholder="SELECT gid f..ways..." />
+            <marker date="1429945574282" expanded="true" signature="3426:3579" placeholder="UPDATE ways ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/simple_tests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="225">
+          <caret line="7" column="11" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
+          <folding>
+            <element signature="e#24#35#0" expanded="true" />
+            <marker date="1431255483749" expanded="true" signature="304:360" placeholder="SELECT y1,x1..ways..." />
+            <marker date="1431255483749" expanded="true" signature="2053:2235" placeholder="SELECT gid,S..ways..." />
+            <marker date="1431255483749" expanded="true" signature="2262:2382" placeholder="SELECT gid,S..ways..." />
+            <marker date="1431255483749" expanded="true" signature="2765:2805" placeholder="SELECT y1,x1..ways..." />
+            <marker date="1431255483749" expanded="true" signature="2765:2806" placeholder="SELECT y1,x1..ways..." />
+            <marker date="1431255483749" expanded="true" signature="3077:3229" placeholder="SELECT gid,S..ways..." />
+            <marker date="1431255483749" expanded="true" signature="3363:3489" placeholder="SELECT id::i..." />
+            <marker date="1431255483749" expanded="true" signature="3509:3663" placeholder="SELECT gid,S..ways..." />
+            <marker date="1431255483749" expanded="true" signature="3865:3906" placeholder="SELECT y1,x1..ways..." />
+            <marker date="1431255483749" expanded="true" signature="3865:3907" placeholder="SELECT y1,x1..ways..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Distance.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="89" max-vertical-offset="615">
+          <caret line="18" column="61" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Server.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="450" max-vertical-offset="1005">
+          <caret line="30" column="20" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="20" />
+          <folding>
+            <element signature="e#26#84#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MainProgram.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="3195" max-vertical-offset="3285">
+          <caret line="213" column="49" selection-start-line="213" selection-start-column="49" selection-end-line="213" selection-end-column="49" />
+          <folding>
+            <element signature="e#43#54#0" expanded="true" />
+            <marker date="1431268796646" expanded="true" signature="501:635" placeholder="SELECT id::i..." />
+            <marker date="1431268796646" expanded="true" signature="1115:1313" placeholder="SELECT DISTI..pgr_astar..." />
+            <marker date="1431268796646" expanded="true" signature="1427:1568" placeholder="SELECT max(x..ways..." />
+            <marker date="1431268796646" expanded="true" signature="1550:1564" placeholder="SELECT * FRO..missing_value..." />
+            <marker date="1431268796646" expanded="true" signature="2497:2532" placeholder="DROP TABLE I..." />
+            <marker date="1431268796646" expanded="true" signature="3145:3240" placeholder="SELECT max(x..ways..." />
+            <marker date="1431268796646" expanded="true" signature="5025:5171" placeholder="SELECT gid,s..ways..." />
+            <marker date="1431268796646" expanded="true" signature="5457:5491" placeholder="SELECT gid F..bounding_box_table..." />
+            <marker date="1431268796646" expanded="true" signature="7197:7266" placeholder="SELECT y1,x1..ways..." />
+            <marker date="1431268796646" expanded="true" signature="7197:7269" placeholder="SELECT y1,x1..ways..." />
+            <marker date="1431268796646" expanded="true" signature="7353:7408" placeholder="SELECT y1,x1..ways..." />
+            <marker date="1431268796646" expanded="true" signature="8234:8280" placeholder="SELECT y1,x1..ways..." />
+            <marker date="1431268796646" expanded="true" signature="8234:8282" placeholder="SELECT y1,x1..ways..." />
+            <marker date="1431268796646" expanded="true" signature="10660:10706" placeholder="SELECT y1,x1..ways..." />
+            <marker date="1431268796646" expanded="true" signature="12504:12593" placeholder="SELECT gid,s..ways..." />
+            <marker date="1431268796646" expanded="true" signature="13124:13313" placeholder="SELECT gid, ..bounding_box_table..." />
+            <marker date="1431268796646" expanded="true" signature="13706:13822" placeholder="SELECT gid,s..ways..." />
+            <marker date="1431268796646" expanded="true" signature="14039:14352" placeholder="SELECT DISTI..." />
+            <marker date="1431268796646" expanded="true" signature="14039:14365" placeholder="SELECT DISTI..." />
+            <marker date="1431268796646" expanded="true" signature="14394:14706" placeholder="SELECT seq, ..pgr_astar..." />
+            <marker date="1431268796646" expanded="true" signature="15975:16358" placeholder="SELECT DISTI..." />
+            <marker date="1431268796646" expanded="true" signature="17060:17081" placeholder="DELETE FROM ..." />
+            <marker date="1431268796646" expanded="true" signature="17172:17329" placeholder="SELECT id,la..measurements..." />
+            <marker date="1431268796646" expanded="true" signature="17761:17840" placeholder="INSERT INTO ..." />
+            <marker date="1431268796646" expanded="true" signature="18044:18067" placeholder="DELETE FROM ..." />
+            <marker date="1431268796646" expanded="true" signature="18159:18234" placeholder="SELECT gid,s..ways..." />
+            <marker date="1431268796646" expanded="true" signature="18599:18744" placeholder="INSERT INTO ..." />
+            <marker date="1431268796646" expanded="true" signature="19421:19517" placeholder="SELECT gid, ..measurements..." />
+            <marker date="1431268796646" expanded="true" signature="20793:21106" placeholder="SELECT DISTI..." />
+            <marker date="1431268796646" expanded="true" signature="21171:21212" placeholder="UPDATE ways ..." />
+            <marker date="1431268796646" expanded="true" signature="23537:23854" placeholder="SELECT DISTI..." />
+            <marker date="1431268796646" expanded="true" signature="23926:24003" placeholder="SELECT gid,t..buffer_geometry_table..." />
+            <marker date="1431268796646" expanded="true" signature="24826:24886" placeholder="UPDATE buffe..." />
+            <marker date="1431268796646" expanded="true" signature="25012:25072" placeholder="UPDATE buffe..." />
+            <marker date="1431268796646" expanded="true" signature="25201:25261" placeholder="UPDATE buffe..." />
+            <marker date="1431268796646" expanded="true" signature="25385:25445" placeholder="UPDATE buffe..." />
+            <marker date="1431268796646" expanded="true" signature="25558:25619" placeholder="UPDATE buffe..." />
+            <marker date="1431268796646" expanded="true" signature="25734:25794" placeholder="UPDATE buffe..." />
+            <marker date="1431268796646" expanded="true" signature="25912:25972" placeholder="UPDATE buffe..." />
+            <marker date="1431268796646" expanded="true" signature="26085:26146" placeholder="UPDATE buffe..." />
+            <marker date="1431268796646" expanded="true" signature="26506:26577" placeholder="SELECT sourc..buffer_geometry_table..." />
+            <marker date="1431268796646" expanded="true" signature="27380:27427" placeholder="SELECT sourc..buffer_geometry_table..." />
+            <marker date="1431268796646" expanded="true" signature="27728:27761" placeholder="DELETE FROM ..." />
+            <marker date="1431268796646" expanded="true" signature="27728:27781" placeholder="DELETE FROM ..." />
+            <marker date="1431268796646" expanded="true" signature="27728:27782" placeholder="DELETE FROM ..." />
+            <marker date="1431268796646" expanded="true" signature="27874:27928" placeholder="DELETE FROM ..." />
+            <marker date="1431268796646" expanded="true" signature="28190:28225" placeholder="SELECT * FRO..buffer_geometry_table..." />
+            <marker date="1431268796646" expanded="true" signature="28190:28247" placeholder="SELECT * FRO..buffer_geometry_table..." />
+            <marker date="1431268796646" expanded="true" signature="28266:28301" placeholder="SELECT * FRO..buffer_geometry_table..." />
+            <marker date="1431268796646" expanded="true" signature="28953:29270" placeholder="SELECT DISTI..." />
+            <marker date="1431268796646" expanded="true" signature="29349:29472" placeholder="SELECT gid A..." />
+            <marker date="1431268796646" expanded="true" signature="29673:29811" placeholder="SELECT gid A..." />
+            <marker date="1431268796646" expanded="true" signature="29673:29812" placeholder="SELECT gid A..." />
+            <marker date="1431268796646" expanded="true" signature="29911:30050" placeholder="SELECT gid A..." />
+            <marker date="1431268796646" expanded="true" signature="30162:30472" placeholder="SELECT DISTI..." />
+            <marker date="1431268796646" expanded="true" signature="30162:30485" placeholder="SELECT DISTI..." />
+            <marker date="1431268796646" expanded="true" signature="30576:30842" placeholder="SELECT seq, ..pgr_astar..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/UpdatePolygons.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1099" max-vertical-offset="3090">
+          <caret line="96" column="18" selection-start-line="96" selection-start-column="18" selection-end-line="96" selection-end-column="18" />
+          <folding>
+            <element signature="e#24#35#0" expanded="true" />
+            <marker date="1429945574282" expanded="true" signature="831:843" placeholder="ALTER TABLE missing_value..." />
+            <marker date="1429945574282" expanded="true" signature="831:868" placeholder="ALTER TABLE ..DROP..." />
+            <marker date="1429945574282" expanded="true" signature="1155:1206" placeholder="ALTER TABLE ..ADD..." />
+            <marker date="1429945574282" expanded="true" signature="1728:1743" placeholder="SELECT gid f..." />
+            <marker date="1429945574282" expanded="true" signature="1728:1744" placeholder="SELECT gid f..missing_value..." />
+            <marker date="1429945574282" expanded="true" signature="1728:1746" placeholder="SELECT gid f..missing_value..." />
+            <marker date="1429945574282" expanded="true" signature="1955:1979" placeholder="SELECT y1,x1..missing_value..." />
+            <marker date="1429945574282" expanded="true" signature="1955:1993" placeholder="SELECT y1,x1..missing_value..." />
+            <marker date="1429945574282" expanded="true" signature="1955:1994" placeholder="SELECT y1,x1..missing_value..." />
+            <marker date="1429945574282" expanded="true" signature="2139:2278" placeholder="UPDATE missi..." />
+            <marker date="1429945574282" expanded="true" signature="2139:2279" placeholder="UPDATE ways ..." />
+            <marker date="1429945574282" expanded="true" signature="3373:3402" placeholder="SELECT gid f..ways..." />
+            <marker date="1429945574282" expanded="true" signature="3426:3579" placeholder="UPDATE ways ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/simple_tests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="100">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#24#35#0" expanded="true" />
+            <marker date="1431255483749" expanded="true" signature="304:360" placeholder="SELECT y1,x1..ways..." />
+            <marker date="1431255483749" expanded="true" signature="2053:2235" placeholder="SELECT gid,S..ways..." />
+            <marker date="1431255483749" expanded="true" signature="2262:2382" placeholder="SELECT gid,S..ways..." />
+            <marker date="1431255483749" expanded="true" signature="2765:2805" placeholder="SELECT y1,x1..ways..." />
+            <marker date="1431255483749" expanded="true" signature="2765:2806" placeholder="SELECT y1,x1..ways..." />
+            <marker date="1431255483749" expanded="true" signature="3077:3229" placeholder="SELECT gid,S..ways..." />
+            <marker date="1431255483749" expanded="true" signature="3363:3489" placeholder="SELECT id::i..." />
+            <marker date="1431255483749" expanded="true" signature="3509:3663" placeholder="SELECT gid,S..ways..." />
+            <marker date="1431255483749" expanded="true" signature="3865:3906" placeholder="SELECT y1,x1..ways..." />
+            <marker date="1431255483749" expanded="true" signature="3865:3907" placeholder="SELECT y1,x1..ways..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Distance.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="89" max-vertical-offset="615">
+          <caret line="18" column="61" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Server.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="450" max-vertical-offset="1005">
+          <caret line="30" column="20" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="20" />
+          <folding>
+            <element signature="e#26#84#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MainProgram.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="3195" max-vertical-offset="3285">
+          <caret line="213" column="49" selection-start-line="213" selection-start-column="49" selection-end-line="213" selection-end-column="49" />
+          <folding>
+            <element signature="e#43#54#0" expanded="true" />
+            <marker date="1431268796646" expanded="true" signature="501:635" placeholder="SELECT id::i..." />
+            <marker date="1431268796646" expanded="true" signature="1115:1313" placeholder="SELECT DISTI..pgr_astar..." />
+            <marker date="1431268796646" expanded="true" signature="1427:1568" placeholder="SELECT max(x..ways..." />
+            <marker date="1431268796646" expanded="true" signature="1550:1564" placeholder="SELECT * FRO..missing_value..." />
+            <marker date="1431268796646" expanded="true" signature="2497:2532" placeholder="DROP TABLE I..." />
+            <marker date="1431268796646" expanded="true" signature="3145:3240" placeholder="SELECT max(x..ways..." />
+            <marker date="1431268796646" expanded="true" signature="5025:5171" placeholder="SELECT gid,s..ways..." />
+            <marker date="1431268796646" expanded="true" signature="5457:5491" placeholder="SELECT gid F..bounding_box_table..." />
+            <marker date="1431268796646" expanded="true" signature="7197:7266" placeholder="SELECT y1,x1..ways..." />
+            <marker date="1431268796646" expanded="true" signature="7197:7269" placeholder="SELECT y1,x1..ways..." />
+            <marker date="1431268796646" expanded="true" signature="7353:7408" placeholder="SELECT y1,x1..ways..." />
+            <marker date="1431268796646" expanded="true" signature="8234:8280" placeholder="SELECT y1,x1..ways..." />
+            <marker date="1431268796646" expanded="true" signature="8234:8282" placeholder="SELECT y1,x1..ways..." />
+            <marker date="1431268796646" expanded="true" signature="10660:10706" placeholder="SELECT y1,x1..ways..." />
+            <marker date="1431268796646" expanded="true" signature="12504:12593" placeholder="SELECT gid,s..ways..." />
+            <marker date="1431268796646" expanded="true" signature="13124:13313" placeholder="SELECT gid, ..bounding_box_table..." />
+            <marker date="1431268796646" expanded="true" signature="13706:13822" placeholder="SELECT gid,s..ways..." />
+            <marker date="1431268796646" expanded="true" signature="14039:14352" placeholder="SELECT DISTI..." />
+            <marker date="1431268796646" expanded="true" signature="14039:14365" placeholder="SELECT DISTI..." />
+            <marker date="1431268796646" expanded="true" signature="14394:14706" placeholder="SELECT seq, ..pgr_astar..." />
+            <marker date="1431268796646" expanded="true" signature="15975:16358" placeholder="SELECT DISTI..." />
+            <marker date="1431268796646" expanded="true" signature="17060:17081" placeholder="DELETE FROM ..." />
+            <marker date="1431268796646" expanded="true" signature="17172:17329" placeholder="SELECT id,la..measurements..." />
+            <marker date="1431268796646" expanded="true" signature="17761:17840" placeholder="INSERT INTO ..." />
+            <marker date="1431268796646" expanded="true" signature="18044:18067" placeholder="DELETE FROM ..." />
+            <marker date="1431268796646" expanded="true" signature="18159:18234" placeholder="SELECT gid,s..ways..." />
+            <marker date="1431268796646" expanded="true" signature="18599:18744" placeholder="INSERT INTO ..." />
+            <marker date="1431268796646" expanded="true" signature="19421:19517" placeholder="SELECT gid, ..measurements..." />
+            <marker date="1431268796646" expanded="true" signature="20793:21106" placeholder="SELECT DISTI..." />
+            <marker date="1431268796646" expanded="true" signature="21171:21212" placeholder="UPDATE ways ..." />
+            <marker date="1431268796646" expanded="true" signature="23537:23854" placeholder="SELECT DISTI..." />
+            <marker date="1431268796646" expanded="true" signature="23926:24003" placeholder="SELECT gid,t..buffer_geometry_table..." />
+            <marker date="1431268796646" expanded="true" signature="24826:24886" placeholder="UPDATE buffe..." />
+            <marker date="1431268796646" expanded="true" signature="25012:25072" placeholder="UPDATE buffe..." />
+            <marker date="1431268796646" expanded="true" signature="25201:25261" placeholder="UPDATE buffe..." />
+            <marker date="1431268796646" expanded="true" signature="25385:25445" placeholder="UPDATE buffe..." />
+            <marker date="1431268796646" expanded="true" signature="25558:25619" placeholder="UPDATE buffe..." />
+            <marker date="1431268796646" expanded="true" signature="25734:25794" placeholder="UPDATE buffe..." />
+            <marker date="1431268796646" expanded="true" signature="25912:25972" placeholder="UPDATE buffe..." />
+            <marker date="1431268796646" expanded="true" signature="26085:26146" placeholder="UPDATE buffe..." />
+            <marker date="1431268796646" expanded="true" signature="26506:26577" placeholder="SELECT sourc..buffer_geometry_table..." />
+            <marker date="1431268796646" expanded="true" signature="27380:27427" placeholder="SELECT sourc..buffer_geometry_table..." />
+            <marker date="1431268796646" expanded="true" signature="27728:27761" placeholder="DELETE FROM ..." />
+            <marker date="1431268796646" expanded="true" signature="27728:27781" placeholder="DELETE FROM ..." />
+            <marker date="1431268796646" expanded="true" signature="27728:27782" placeholder="DELETE FROM ..." />
+            <marker date="1431268796646" expanded="true" signature="27874:27928" placeholder="DELETE FROM ..." />
+            <marker date="1431268796646" expanded="true" signature="28190:28225" placeholder="SELECT * FRO..buffer_geometry_table..." />
+            <marker date="1431268796646" expanded="true" signature="28190:28247" placeholder="SELECT * FRO..buffer_geometry_table..." />
+            <marker date="1431268796646" expanded="true" signature="28266:28301" placeholder="SELECT * FRO..buffer_geometry_table..." />
+            <marker date="1431268796646" expanded="true" signature="28953:29270" placeholder="SELECT DISTI..." />
+            <marker date="1431268796646" expanded="true" signature="29349:29472" placeholder="SELECT gid A..." />
+            <marker date="1431268796646" expanded="true" signature="29673:29811" placeholder="SELECT gid A..." />
+            <marker date="1431268796646" expanded="true" signature="29673:29812" placeholder="SELECT gid A..." />
+            <marker date="1431268796646" expanded="true" signature="29911:30050" placeholder="SELECT gid A..." />
+            <marker date="1431268796646" expanded="true" signature="30162:30472" placeholder="SELECT DISTI..." />
+            <marker date="1431268796646" expanded="true" signature="30162:30485" placeholder="SELECT DISTI..." />
+            <marker date="1431268796646" expanded="true" signature="30576:30842" placeholder="SELECT seq, ..pgr_astar..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/UpdatePolygons.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3090">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#24#35#0" expanded="true" />
+            <marker date="1429945574282" expanded="true" signature="831:843" placeholder="ALTER TABLE missing_value..." />
+            <marker date="1429945574282" expanded="true" signature="831:868" placeholder="ALTER TABLE ..DROP..." />
+            <marker date="1429945574282" expanded="true" signature="1155:1206" placeholder="ALTER TABLE ..ADD..." />
+            <marker date="1429945574282" expanded="true" signature="1728:1743" placeholder="SELECT gid f..." />
+            <marker date="1429945574282" expanded="true" signature="1728:1744" placeholder="SELECT gid f..missing_value..." />
+            <marker date="1429945574282" expanded="true" signature="1728:1746" placeholder="SELECT gid f..missing_value..." />
+            <marker date="1429945574282" expanded="true" signature="1955:1979" placeholder="SELECT y1,x1..missing_value..." />
+            <marker date="1429945574282" expanded="true" signature="1955:1993" placeholder="SELECT y1,x1..missing_value..." />
+            <marker date="1429945574282" expanded="true" signature="1955:1994" placeholder="SELECT y1,x1..missing_value..." />
+            <marker date="1429945574282" expanded="true" signature="2139:2278" placeholder="UPDATE missi..." />
+            <marker date="1429945574282" expanded="true" signature="2139:2279" placeholder="UPDATE ways ..." />
+            <marker date="1429945574282" expanded="true" signature="3373:3402" placeholder="SELECT gid f..ways..." />
+            <marker date="1429945574282" expanded="true" signature="3426:3579" placeholder="UPDATE ways ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/simple_tests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="225">
+          <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+          <folding>
+            <element signature="e#24#35#0" expanded="true" />
+            <marker date="1431255483749" expanded="true" signature="304:360" placeholder="SELECT y1,x1..ways..." />
+            <marker date="1431255483749" expanded="true" signature="2053:2235" placeholder="SELECT gid,S..ways..." />
+            <marker date="1431255483749" expanded="true" signature="2262:2382" placeholder="SELECT gid,S..ways..." />
+            <marker date="1431255483749" expanded="true" signature="2765:2805" placeholder="SELECT y1,x1..ways..." />
+            <marker date="1431255483749" expanded="true" signature="2765:2806" placeholder="SELECT y1,x1..ways..." />
+            <marker date="1431255483749" expanded="true" signature="3077:3229" placeholder="SELECT gid,S..ways..." />
+            <marker date="1431255483749" expanded="true" signature="3363:3489" placeholder="SELECT id::i..." />
+            <marker date="1431255483749" expanded="true" signature="3509:3663" placeholder="SELECT gid,S..ways..." />
+            <marker date="1431255483749" expanded="true" signature="3865:3906" placeholder="SELECT y1,x1..ways..." />
+            <marker date="1431255483749" expanded="true" signature="3865:3907" placeholder="SELECT y1,x1..ways..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Distance.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="89" max-vertical-offset="615">
+          <caret line="18" column="61" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Server.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="450" max-vertical-offset="1005">
+          <caret line="30" column="20" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="20" />
+          <folding>
+            <element signature="e#26#84#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MainProgram.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="315" max-vertical-offset="3285">
+          <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="30" />
+          <folding>
+            <element signature="e#43#54#0" expanded="true" />
+            <marker date="1431268796646" expanded="true" signature="501:635" placeholder="SELECT id::i..." />
+            <marker date="1431268796646" expanded="true" signature="1115:1313" placeholder="SELECT DISTI..pgr_astar..." />
+            <marker date="1431268796646" expanded="true" signature="1427:1568" placeholder="SELECT max(x..ways..." />
+            <marker date="1431268796646" expanded="true" signature="1550:1564" placeholder="SELECT * FRO..missing_value..." />
+            <marker date="1431268796646" expanded="true" signature="2497:2532" placeholder="DROP TABLE I..." />
+            <marker date="1431268796646" expanded="true" signature="3145:3240" placeholder="SELECT max(x..ways..." />
+            <marker date="1431268796646" expanded="true" signature="5025:5171" placeholder="SELECT gid,s..ways..." />
+            <marker date="1431268796646" expanded="true" signature="5457:5491" placeholder="SELECT gid F..bounding_box_table..." />
+            <marker date="1431268796646" expanded="true" signature="7197:7266" placeholder="SELECT y1,x1..ways..." />
+            <marker date="1431268796646" expanded="true" signature="7197:7269" placeholder="SELECT y1,x1..ways..." />
+            <marker date="1431268796646" expanded="true" signature="7353:7408" placeholder="SELECT y1,x1..ways..." />
+            <marker date="1431268796646" expanded="true" signature="8234:8280" placeholder="SELECT y1,x1..ways..." />
+            <marker date="1431268796646" expanded="true" signature="8234:8282" placeholder="SELECT y1,x1..ways..." />
+            <marker date="1431268796646" expanded="true" signature="10660:10706" placeholder="SELECT y1,x1..ways..." />
+            <marker date="1431268796646" expanded="true" signature="12504:12593" placeholder="SELECT gid,s..ways..." />
+            <marker date="1431268796646" expanded="true" signature="13124:13313" placeholder="SELECT gid, ..bounding_box_table..." />
+            <marker date="1431268796646" expanded="true" signature="13706:13822" placeholder="SELECT gid,s..ways..." />
+            <marker date="1431268796646" expanded="true" signature="14039:14352" placeholder="SELECT DISTI..." />
+            <marker date="1431268796646" expanded="true" signature="14039:14365" placeholder="SELECT DISTI..." />
+            <marker date="1431268796646" expanded="true" signature="14394:14706" placeholder="SELECT seq, ..pgr_astar..." />
+            <marker date="1431268796646" expanded="true" signature="15975:16358" placeholder="SELECT DISTI..." />
+            <marker date="1431268796646" expanded="true" signature="17060:17081" placeholder="DELETE FROM ..." />
+            <marker date="1431268796646" expanded="true" signature="17172:17329" placeholder="SELECT id,la..measurements..." />
+            <marker date="1431268796646" expanded="true" signature="17761:17840" placeholder="INSERT INTO ..." />
+            <marker date="1431268796646" expanded="true" signature="18044:18067" placeholder="DELETE FROM ..." />
+            <marker date="1431268796646" expanded="true" signature="18159:18234" placeholder="SELECT gid,s..ways..." />
+            <marker date="1431268796646" expanded="true" signature="18599:18744" placeholder="INSERT INTO ..." />
+            <marker date="1431268796646" expanded="true" signature="19421:19517" placeholder="SELECT gid, ..measurements..." />
+            <marker date="1431268796646" expanded="true" signature="20793:21106" placeholder="SELECT DISTI..." />
+            <marker date="1431268796646" expanded="true" signature="21171:21212" placeholder="UPDATE ways ..." />
+            <marker date="1431268796646" expanded="true" signature="23537:23854" placeholder="SELECT DISTI..." />
+            <marker date="1431268796646" expanded="true" signature="23926:24003" placeholder="SELECT gid,t..buffer_geometry_table..." />
+            <marker date="1431268796646" expanded="true" signature="24826:24886" placeholder="UPDATE buffe..." />
+            <marker date="1431268796646" expanded="true" signature="25012:25072" placeholder="UPDATE buffe..." />
+            <marker date="1431268796646" expanded="true" signature="25201:25261" placeholder="UPDATE buffe..." />
+            <marker date="1431268796646" expanded="true" signature="25385:25445" placeholder="UPDATE buffe..." />
+            <marker date="1431268796646" expanded="true" signature="25558:25619" placeholder="UPDATE buffe..." />
+            <marker date="1431268796646" expanded="true" signature="25734:25794" placeholder="UPDATE buffe..." />
+            <marker date="1431268796646" expanded="true" signature="25912:25972" placeholder="UPDATE buffe..." />
+            <marker date="1431268796646" expanded="true" signature="26085:26146" placeholder="UPDATE buffe..." />
+            <marker date="1431268796646" expanded="true" signature="26506:26577" placeholder="SELECT sourc..buffer_geometry_table..." />
+            <marker date="1431268796646" expanded="true" signature="27380:27427" placeholder="SELECT sourc..buffer_geometry_table..." />
+            <marker date="1431268796646" expanded="true" signature="27728:27761" placeholder="DELETE FROM ..." />
+            <marker date="1431268796646" expanded="true" signature="27728:27781" placeholder="DELETE FROM ..." />
+            <marker date="1431268796646" expanded="true" signature="27728:27782" placeholder="DELETE FROM ..." />
+            <marker date="1431268796646" expanded="true" signature="27874:27928" placeholder="DELETE FROM ..." />
+            <marker date="1431268796646" expanded="true" signature="28190:28225" placeholder="SELECT * FRO..buffer_geometry_table..." />
+            <marker date="1431268796646" expanded="true" signature="28190:28247" placeholder="SELECT * FRO..buffer_geometry_table..." />
+            <marker date="1431268796646" expanded="true" signature="28266:28301" placeholder="SELECT * FRO..buffer_geometry_table..." />
+            <marker date="1431268796646" expanded="true" signature="28953:29270" placeholder="SELECT DISTI..." />
+            <marker date="1431268796646" expanded="true" signature="29349:29472" placeholder="SELECT gid A..." />
+            <marker date="1431268796646" expanded="true" signature="29673:29811" placeholder="SELECT gid A..." />
+            <marker date="1431268796646" expanded="true" signature="29673:29812" placeholder="SELECT gid A..." />
+            <marker date="1431268796646" expanded="true" signature="29911:30050" placeholder="SELECT gid A..." />
+            <marker date="1431268796646" expanded="true" signature="30162:30472" placeholder="SELECT DISTI..." />
+            <marker date="1431268796646" expanded="true" signature="30162:30485" placeholder="SELECT DISTI..." />
+            <marker date="1431268796646" expanded="true" signature="30576:30842" placeholder="SELECT seq, ..pgr_astar..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/UpdatePolygons.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1170">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#24#35#0" expanded="true" />
+            <marker date="1429945574282" expanded="true" signature="831:843" placeholder="ALTER TABLE missing_value..." />
+            <marker date="1429945574282" expanded="true" signature="831:868" placeholder="ALTER TABLE ..DROP..." />
+            <marker date="1429945574282" expanded="true" signature="1155:1206" placeholder="ALTER TABLE ..ADD..." />
+            <marker date="1429945574282" expanded="true" signature="1728:1743" placeholder="SELECT gid f..." />
+            <marker date="1429945574282" expanded="true" signature="1728:1744" placeholder="SELECT gid f..missing_value..." />
+            <marker date="1429945574282" expanded="true" signature="1728:1746" placeholder="SELECT gid f..missing_value..." />
+            <marker date="1429945574282" expanded="true" signature="1955:1979" placeholder="SELECT y1,x1..missing_value..." />
+            <marker date="1429945574282" expanded="true" signature="1955:1993" placeholder="SELECT y1,x1..missing_value..." />
+            <marker date="1429945574282" expanded="true" signature="1955:1994" placeholder="SELECT y1,x1..missing_value..." />
+            <marker date="1429945574282" expanded="true" signature="2139:2278" placeholder="UPDATE missi..." />
+            <marker date="1429945574282" expanded="true" signature="2139:2279" placeholder="UPDATE ways ..." />
+            <marker date="1429945574282" expanded="true" signature="3373:3402" placeholder="SELECT gid f..ways..." />
+            <marker date="1429945574282" expanded="true" signature="3426:3579" placeholder="UPDATE ways ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/simple_tests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="225">
+          <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+          <folding>
+            <element signature="e#24#35#0" expanded="true" />
+            <marker date="1431255483749" expanded="true" signature="304:360" placeholder="SELECT y1,x1..ways..." />
+            <marker date="1431255483749" expanded="true" signature="2053:2235" placeholder="SELECT gid,S..ways..." />
+            <marker date="1431255483749" expanded="true" signature="2262:2382" placeholder="SELECT gid,S..ways..." />
+            <marker date="1431255483749" expanded="true" signature="2765:2805" placeholder="SELECT y1,x1..ways..." />
+            <marker date="1431255483749" expanded="true" signature="2765:2806" placeholder="SELECT y1,x1..ways..." />
+            <marker date="1431255483749" expanded="true" signature="3077:3229" placeholder="SELECT gid,S..ways..." />
+            <marker date="1431255483749" expanded="true" signature="3363:3489" placeholder="SELECT id::i..." />
+            <marker date="1431255483749" expanded="true" signature="3509:3663" placeholder="SELECT gid,S..ways..." />
+            <marker date="1431255483749" expanded="true" signature="3865:3906" placeholder="SELECT y1,x1..ways..." />
+            <marker date="1431255483749" expanded="true" signature="3865:3907" placeholder="SELECT y1,x1..ways..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Distance.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="89" max-vertical-offset="615">
+          <caret line="18" column="61" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Server.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="450" max-vertical-offset="1005">
+          <caret line="30" column="20" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="20" />
+          <folding>
+            <element signature="e#26#84#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MainProgram.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="315" max-vertical-offset="3285">
+          <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="30" />
+          <folding>
+            <element signature="e#43#54#0" expanded="true" />
+            <marker date="1431268796646" expanded="true" signature="501:635" placeholder="SELECT id::i..." />
+            <marker date="1431268796646" expanded="true" signature="1115:1313" placeholder="SELECT DISTI..pgr_astar..." />
+            <marker date="1431268796646" expanded="true" signature="1427:1568" placeholder="SELECT max(x..ways..." />
+            <marker date="1431268796646" expanded="true" signature="1550:1564" placeholder="SELECT * FRO..missing_value..." />
+            <marker date="1431268796646" expanded="true" signature="2497:2532" placeholder="DROP TABLE I..." />
+            <marker date="1431268796646" expanded="true" signature="3145:3240" placeholder="SELECT max(x..ways..." />
+            <marker date="1431268796646" expanded="true" signature="5025:5171" placeholder="SELECT gid,s..ways..." />
+            <marker date="1431268796646" expanded="true" signature="5457:5491" placeholder="SELECT gid F..bounding_box_table..." />
+            <marker date="1431268796646" expanded="true" signature="7197:7266" placeholder="SELECT y1,x1..ways..." />
+            <marker date="1431268796646" expanded="true" signature="7197:7269" placeholder="SELECT y1,x1..ways..." />
+            <marker date="1431268796646" expanded="true" signature="7353:7408" placeholder="SELECT y1,x1..ways..." />
+            <marker date="1431268796646" expanded="true" signature="8234:8280" placeholder="SELECT y1,x1..ways..." />
+            <marker date="1431268796646" expanded="true" signature="8234:8282" placeholder="SELECT y1,x1..ways..." />
+            <marker date="1431268796646" expanded="true" signature="10660:10706" placeholder="SELECT y1,x1..ways..." />
+            <marker date="1431268796646" expanded="true" signature="12504:12593" placeholder="SELECT gid,s..ways..." />
+            <marker date="1431268796646" expanded="true" signature="13124:13313" placeholder="SELECT gid, ..bounding_box_table..." />
+            <marker date="1431268796646" expanded="true" signature="13706:13822" placeholder="SELECT gid,s..ways..." />
+            <marker date="1431268796646" expanded="true" signature="14039:14352" placeholder="SELECT DISTI..." />
+            <marker date="1431268796646" expanded="true" signature="14039:14365" placeholder="SELECT DISTI..." />
+            <marker date="1431268796646" expanded="true" signature="14394:14706" placeholder="SELECT seq, ..pgr_astar..." />
+            <marker date="1431268796646" expanded="true" signature="15975:16358" placeholder="SELECT DISTI..." />
+            <marker date="1431268796646" expanded="true" signature="17060:17081" placeholder="DELETE FROM ..." />
+            <marker date="1431268796646" expanded="true" signature="17172:17329" placeholder="SELECT id,la..measurements..." />
+            <marker date="1431268796646" expanded="true" signature="17761:17840" placeholder="INSERT INTO ..." />
+            <marker date="1431268796646" expanded="true" signature="18044:18067" placeholder="DELETE FROM ..." />
+            <marker date="1431268796646" expanded="true" signature="18159:18234" placeholder="SELECT gid,s..ways..." />
+            <marker date="1431268796646" expanded="true" signature="18599:18744" placeholder="INSERT INTO ..." />
+            <marker date="1431268796646" expanded="true" signature="19421:19517" placeholder="SELECT gid, ..measurements..." />
+            <marker date="1431268796646" expanded="true" signature="20793:21106" placeholder="SELECT DISTI..." />
+            <marker date="1431268796646" expanded="true" signature="21171:21212" placeholder="UPDATE ways ..." />
+            <marker date="1431268796646" expanded="true" signature="23537:23854" placeholder="SELECT DISTI..." />
+            <marker date="1431268796646" expanded="true" signature="23926:24003" placeholder="SELECT gid,t..buffer_geometry_table..." />
+            <marker date="1431268796646" expanded="true" signature="24826:24886" placeholder="UPDATE buffe..." />
+            <marker date="1431268796646" expanded="true" signature="25012:25072" placeholder="UPDATE buffe..." />
+            <marker date="1431268796646" expanded="true" signature="25201:25261" placeholder="UPDATE buffe..." />
+            <marker date="1431268796646" expanded="true" signature="25385:25445" placeholder="UPDATE buffe..." />
+            <marker date="1431268796646" expanded="true" signature="25558:25619" placeholder="UPDATE buffe..." />
+            <marker date="1431268796646" expanded="true" signature="25734:25794" placeholder="UPDATE buffe..." />
+            <marker date="1431268796646" expanded="true" signature="25912:25972" placeholder="UPDATE buffe..." />
+            <marker date="1431268796646" expanded="true" signature="26085:26146" placeholder="UPDATE buffe..." />
+            <marker date="1431268796646" expanded="true" signature="26506:26577" placeholder="SELECT sourc..buffer_geometry_table..." />
+            <marker date="1431268796646" expanded="true" signature="27380:27427" placeholder="SELECT sourc..buffer_geometry_table..." />
+            <marker date="1431268796646" expanded="true" signature="27728:27761" placeholder="DELETE FROM ..." />
+            <marker date="1431268796646" expanded="true" signature="27728:27781" placeholder="DELETE FROM ..." />
+            <marker date="1431268796646" expanded="true" signature="27728:27782" placeholder="DELETE FROM ..." />
+            <marker date="1431268796646" expanded="true" signature="27874:27928" placeholder="DELETE FROM ..." />
+            <marker date="1431268796646" expanded="true" signature="28190:28225" placeholder="SELECT * FRO..buffer_geometry_table..." />
+            <marker date="1431268796646" expanded="true" signature="28190:28247" placeholder="SELECT * FRO..buffer_geometry_table..." />
+            <marker date="1431268796646" expanded="true" signature="28266:28301" placeholder="SELECT * FRO..buffer_geometry_table..." />
+            <marker date="1431268796646" expanded="true" signature="28953:29270" placeholder="SELECT DISTI..." />
+            <marker date="1431268796646" expanded="true" signature="29349:29472" placeholder="SELECT gid A..." />
+            <marker date="1431268796646" expanded="true" signature="29673:29811" placeholder="SELECT gid A..." />
+            <marker date="1431268796646" expanded="true" signature="29673:29812" placeholder="SELECT gid A..." />
+            <marker date="1431268796646" expanded="true" signature="29911:30050" placeholder="SELECT gid A..." />
+            <marker date="1431268796646" expanded="true" signature="30162:30472" placeholder="SELECT DISTI..." />
+            <marker date="1431268796646" expanded="true" signature="30162:30485" placeholder="SELECT DISTI..." />
+            <marker date="1431268796646" expanded="true" signature="30576:30842" placeholder="SELECT seq, ..pgr_astar..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/UpdatePolygons.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1170">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#24#35#0" expanded="true" />
+            <marker date="1429945574282" expanded="true" signature="831:843" placeholder="ALTER TABLE missing_value..." />
+            <marker date="1429945574282" expanded="true" signature="831:868" placeholder="ALTER TABLE ..DROP..." />
+            <marker date="1429945574282" expanded="true" signature="1155:1206" placeholder="ALTER TABLE ..ADD..." />
+            <marker date="1429945574282" expanded="true" signature="1728:1743" placeholder="SELECT gid f..." />
+            <marker date="1429945574282" expanded="true" signature="1728:1744" placeholder="SELECT gid f..missing_value..." />
+            <marker date="1429945574282" expanded="true" signature="1728:1746" placeholder="SELECT gid f..missing_value..." />
+            <marker date="1429945574282" expanded="true" signature="1955:1979" placeholder="SELECT y1,x1..missing_value..." />
+            <marker date="1429945574282" expanded="true" signature="1955:1993" placeholder="SELECT y1,x1..missing_value..." />
+            <marker date="1429945574282" expanded="true" signature="1955:1994" placeholder="SELECT y1,x1..missing_value..." />
+            <marker date="1429945574282" expanded="true" signature="2139:2278" placeholder="UPDATE missi..." />
+            <marker date="1429945574282" expanded="true" signature="2139:2279" placeholder="UPDATE ways ..." />
+            <marker date="1429945574282" expanded="true" signature="3373:3402" placeholder="SELECT gid f..ways..." />
+            <marker date="1429945574282" expanded="true" signature="3426:3579" placeholder="UPDATE ways ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/simple_tests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="225">
+          <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+          <folding>
+            <element signature="e#24#35#0" expanded="true" />
+            <marker date="1431255483749" expanded="true" signature="304:360" placeholder="SELECT y1,x1..ways..." />
+            <marker date="1431255483749" expanded="true" signature="2053:2235" placeholder="SELECT gid,S..ways..." />
+            <marker date="1431255483749" expanded="true" signature="2262:2382" placeholder="SELECT gid,S..ways..." />
+            <marker date="1431255483749" expanded="true" signature="2765:2805" placeholder="SELECT y1,x1..ways..." />
+            <marker date="1431255483749" expanded="true" signature="2765:2806" placeholder="SELECT y1,x1..ways..." />
+            <marker date="1431255483749" expanded="true" signature="3077:3229" placeholder="SELECT gid,S..ways..." />
+            <marker date="1431255483749" expanded="true" signature="3363:3489" placeholder="SELECT id::i..." />
+            <marker date="1431255483749" expanded="true" signature="3509:3663" placeholder="SELECT gid,S..ways..." />
+            <marker date="1431255483749" expanded="true" signature="3865:3906" placeholder="SELECT y1,x1..ways..." />
+            <marker date="1431255483749" expanded="true" signature="3865:3907" placeholder="SELECT y1,x1..ways..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Distance.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="89" max-vertical-offset="615">
+          <caret line="18" column="61" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Server.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="450" max-vertical-offset="1005">
+          <caret line="30" column="20" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="20" />
+          <folding>
+            <element signature="e#26#84#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MainProgram.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="990">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#43#54#0" expanded="true" />
+            <marker date="1431268796646" expanded="true" signature="501:635" placeholder="SELECT id::i..." />
+            <marker date="1431268796646" expanded="true" signature="1115:1313" placeholder="SELECT DISTI..pgr_astar..." />
+            <marker date="1431268796646" expanded="true" signature="1427:1568" placeholder="SELECT max(x..ways..." />
+            <marker date="1431268796646" expanded="true" signature="1550:1564" placeholder="SELECT * FRO..missing_value..." />
+            <marker date="1431268796646" expanded="true" signature="2497:2532" placeholder="DROP TABLE I..." />
+            <marker date="1431268796646" expanded="true" signature="3145:3240" placeholder="SELECT max(x..ways..." />
+            <marker date="1431268796646" expanded="true" signature="5025:5171" placeholder="SELECT gid,s..ways..." />
+            <marker date="1431268796646" expanded="true" signature="5457:5491" placeholder="SELECT gid F..bounding_box_table..." />
+            <marker date="1431268796646" expanded="true" signature="7197:7266" placeholder="SELECT y1,x1..ways..." />
+            <marker date="1431268796646" expanded="true" signature="7197:7269" placeholder="SELECT y1,x1..ways..." />
+            <marker date="1431268796646" expanded="true" signature="7353:7408" placeholder="SELECT y1,x1..ways..." />
+            <marker date="1431268796646" expanded="true" signature="8234:8280" placeholder="SELECT y1,x1..ways..." />
+            <marker date="1431268796646" expanded="true" signature="8234:8282" placeholder="SELECT y1,x1..ways..." />
+            <marker date="1431268796646" expanded="true" signature="10660:10706" placeholder="SELECT y1,x1..ways..." />
+            <marker date="1431268796646" expanded="true" signature="12504:12593" placeholder="SELECT gid,s..ways..." />
+            <marker date="1431268796646" expanded="true" signature="13124:13313" placeholder="SELECT gid, ..bounding_box_table..." />
+            <marker date="1431268796646" expanded="true" signature="13706:13822" placeholder="SELECT gid,s..ways..." />
+            <marker date="1431268796646" expanded="true" signature="14039:14352" placeholder="SELECT DISTI..." />
+            <marker date="1431268796646" expanded="true" signature="14039:14365" placeholder="SELECT DISTI..." />
+            <marker date="1431268796646" expanded="true" signature="14394:14706" placeholder="SELECT seq, ..pgr_astar..." />
+            <marker date="1431268796646" expanded="true" signature="15975:16358" placeholder="SELECT DISTI..." />
+            <marker date="1431268796646" expanded="true" signature="17060:17081" placeholder="DELETE FROM ..." />
+            <marker date="1431268796646" expanded="true" signature="17172:17329" placeholder="SELECT id,la..measurements..." />
+            <marker date="1431268796646" expanded="true" signature="17761:17840" placeholder="INSERT INTO ..." />
+            <marker date="1431268796646" expanded="true" signature="18044:18067" placeholder="DELETE FROM ..." />
+            <marker date="1431268796646" expanded="true" signature="18159:18234" placeholder="SELECT gid,s..ways..." />
+            <marker date="1431268796646" expanded="true" signature="18599:18744" placeholder="INSERT INTO ..." />
+            <marker date="1431268796646" expanded="true" signature="19421:19517" placeholder="SELECT gid, ..measurements..." />
+            <marker date="1431268796646" expanded="true" signature="20793:21106" placeholder="SELECT DISTI..." />
+            <marker date="1431268796646" expanded="true" signature="21171:21212" placeholder="UPDATE ways ..." />
+            <marker date="1431268796646" expanded="true" signature="23537:23854" placeholder="SELECT DISTI..." />
+            <marker date="1431268796646" expanded="true" signature="23926:24003" placeholder="SELECT gid,t..buffer_geometry_table..." />
+            <marker date="1431268796646" expanded="true" signature="24826:24886" placeholder="UPDATE buffe..." />
+            <marker date="1431268796646" expanded="true" signature="25012:25072" placeholder="UPDATE buffe..." />
+            <marker date="1431268796646" expanded="true" signature="25201:25261" placeholder="UPDATE buffe..." />
+            <marker date="1431268796646" expanded="true" signature="25385:25445" placeholder="UPDATE buffe..." />
+            <marker date="1431268796646" expanded="true" signature="25558:25619" placeholder="UPDATE buffe..." />
+            <marker date="1431268796646" expanded="true" signature="25734:25794" placeholder="UPDATE buffe..." />
+            <marker date="1431268796646" expanded="true" signature="25912:25972" placeholder="UPDATE buffe..." />
+            <marker date="1431268796646" expanded="true" signature="26085:26146" placeholder="UPDATE buffe..." />
+            <marker date="1431268796646" expanded="true" signature="26506:26577" placeholder="SELECT sourc..buffer_geometry_table..." />
+            <marker date="1431268796646" expanded="true" signature="27380:27427" placeholder="SELECT sourc..buffer_geometry_table..." />
+            <marker date="1431268796646" expanded="true" signature="27728:27761" placeholder="DELETE FROM ..." />
+            <marker date="1431268796646" expanded="true" signature="27728:27781" placeholder="DELETE FROM ..." />
+            <marker date="1431268796646" expanded="true" signature="27728:27782" placeholder="DELETE FROM ..." />
+            <marker date="1431268796646" expanded="true" signature="27874:27928" placeholder="DELETE FROM ..." />
+            <marker date="1431268796646" expanded="true" signature="28190:28225" placeholder="SELECT * FRO..buffer_geometry_table..." />
+            <marker date="1431268796646" expanded="true" signature="28190:28247" placeholder="SELECT * FRO..buffer_geometry_table..." />
+            <marker date="1431268796646" expanded="true" signature="28266:28301" placeholder="SELECT * FRO..buffer_geometry_table..." />
+            <marker date="1431268796646" expanded="true" signature="28953:29270" placeholder="SELECT DISTI..." />
+            <marker date="1431268796646" expanded="true" signature="29349:29472" placeholder="SELECT gid A..." />
+            <marker date="1431268796646" expanded="true" signature="29673:29811" placeholder="SELECT gid A..." />
+            <marker date="1431268796646" expanded="true" signature="29673:29812" placeholder="SELECT gid A..." />
+            <marker date="1431268796646" expanded="true" signature="29911:30050" placeholder="SELECT gid A..." />
+            <marker date="1431268796646" expanded="true" signature="30162:30472" placeholder="SELECT DISTI..." />
+            <marker date="1431268796646" expanded="true" signature="30162:30485" placeholder="SELECT DISTI..." />
+            <marker date="1431268796646" expanded="true" signature="30576:30842" placeholder="SELECT seq, ..pgr_astar..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4913295" vertical-offset="0" max-vertical-offset="519">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DBConnection.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="420">
+          <caret line="17" column="79" selection-start-line="17" selection-start-column="79" selection-end-line="17" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Constants.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="225">
+          <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ClassifyPollution.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="345">
+          <caret line="17" column="8" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Distance.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="645">
+          <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Server.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1005">
+          <caret line="30" column="20" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="20" />
+          <folding>
+            <element signature="e#26#84#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/UpdatePolygons.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="344" max-vertical-offset="3030">
+          <caret line="34" column="40" selection-start-line="34" selection-start-column="40" selection-end-line="34" selection-end-column="40" />
+          <folding>
+            <element signature="e#24#35#0" expanded="true" />
+            <marker date="1429945574282" expanded="true" signature="831:843" placeholder="ALTER TABLE missing_value..." />
+            <marker date="1429945574282" expanded="true" signature="831:868" placeholder="ALTER TABLE ..DROP..." />
+            <marker date="1429945574282" expanded="true" signature="1155:1206" placeholder="ALTER TABLE ..ADD..." />
+            <marker date="1429945574282" expanded="true" signature="1728:1743" placeholder="SELECT gid f..." />
+            <marker date="1429945574282" expanded="true" signature="1728:1744" placeholder="SELECT gid f..missing_value..." />
+            <marker date="1429945574282" expanded="true" signature="1728:1746" placeholder="SELECT gid f..missing_value..." />
+            <marker date="1429945574282" expanded="true" signature="1955:1979" placeholder="SELECT y1,x1..missing_value..." />
+            <marker date="1429945574282" expanded="true" signature="1955:1993" placeholder="SELECT y1,x1..missing_value..." />
+            <marker date="1429945574282" expanded="true" signature="1955:1994" placeholder="SELECT y1,x1..missing_value..." />
+            <marker date="1429945574282" expanded="true" signature="2139:2278" placeholder="UPDATE missi..." />
+            <marker date="1429945574282" expanded="true" signature="2139:2279" placeholder="UPDATE ways ..." />
+            <marker date="1429945574282" expanded="true" signature="3373:3402" placeholder="SELECT gid f..ways..." />
+            <marker date="1429945574282" expanded="true" signature="3426:3579" placeholder="UPDATE ways ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MigrateData.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="45" max-vertical-offset="1125">
+          <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+          <folding>
+            <element signature="e#25#51#0" expanded="true" />
+            <marker date="1430115134807" expanded="true" signature="229:266" placeholder="SELECT max(i..measurements..." />
+            <marker date="1430115134807" expanded="true" signature="506:560" placeholder="SELECT id FR..streams..." />
+            <marker date="1430115134807" expanded="true" signature="506:562" placeholder="SELECT id FR..streams..." />
+            <marker date="1430115134807" expanded="true" signature="951:1089" placeholder="SELECT id,la..." />
+            <marker date="1430115134807" expanded="true" signature="1139:1267" placeholder="SELECT id,la..." />
+            <marker date="1430115134807" expanded="true" signature="1148:1267" placeholder="SELECT id,la..." />
+            <marker date="1430115134807" expanded="true" signature="1640:1782" placeholder="INSERT INTO ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/lib/python2.7/SocketServer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33333334" vertical-offset="5998" max-vertical-offset="10995">
+          <caret line="418" column="0" selection-start-line="418" selection-start-column="0" selection-end-line="418" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/lib/python2.7/socket.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3266564" vertical-offset="3088" max-vertical-offset="8640">
+          <caret line="223" column="0" selection-start-line="223" selection-start-column="0" selection-end-line="223" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PlottingUtil.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1799" max-vertical-offset="3450">
+          <caret line="135" column="24" selection-start-line="135" selection-start-column="24" selection-end-line="135" selection-end-column="24" />
+          <folding>
+            <element signature="e#24#56#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/simple_tests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1701" max-vertical-offset="2190">
+          <caret line="129" column="33" selection-start-line="128" selection-start-column="0" selection-end-line="129" selection-end-column="33" />
+          <folding>
+            <element signature="e#24#35#0" expanded="true" />
+            <marker date="1431255483749" expanded="true" signature="304:360" placeholder="SELECT y1,x1..ways..." />
+            <marker date="1431255483749" expanded="true" signature="2053:2235" placeholder="SELECT gid,S..ways..." />
+            <marker date="1431255483749" expanded="true" signature="2262:2382" placeholder="SELECT gid,S..ways..." />
+            <marker date="1431255483749" expanded="true" signature="2765:2805" placeholder="SELECT y1,x1..ways..." />
+            <marker date="1431255483749" expanded="true" signature="2765:2806" placeholder="SELECT y1,x1..ways..." />
+            <marker date="1431255483749" expanded="true" signature="3077:3229" placeholder="SELECT gid,S..ways..." />
+            <marker date="1431255483749" expanded="true" signature="3363:3489" placeholder="SELECT id::i..." />
+            <marker date="1431255483749" expanded="true" signature="3509:3663" placeholder="SELECT gid,S..ways..." />
+            <marker date="1431255483749" expanded="true" signature="3865:3906" placeholder="SELECT y1,x1..ways..." />
+            <marker date="1431255483749" expanded="true" signature="3865:3907" placeholder="SELECT y1,x1..ways..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/lib/python2.7/BaseHTTPServer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1348" max-vertical-offset="9090">
+          <caret line="107" column="0" selection-start-line="107" selection-start-column="0" selection-end-line="107" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MainProgram.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="14228" max-vertical-offset="14805">
+          <caret line="976" column="36" selection-start-line="976" selection-start-column="36" selection-end-line="976" selection-end-column="36" />
+          <folding>
+            <element signature="e#43#54#0" expanded="true" />
+            <marker date="1431268796646" expanded="true" signature="501:635" placeholder="SELECT id::i..." />
+            <marker date="1431268796646" expanded="true" signature="1115:1313" placeholder="SELECT DISTI..pgr_astar..." />
+            <marker date="1431268796646" expanded="true" signature="1427:1568" placeholder="SELECT max(x..ways..." />
+            <marker date="1431268796646" expanded="true" signature="1550:1564" placeholder="SELECT * FRO..missing_value..." />
+            <marker date="1431268796646" expanded="true" signature="2497:2532" placeholder="DROP TABLE I..." />
+            <marker date="1431268796646" expanded="true" signature="3145:3240" placeholder="SELECT max(x..ways..." />
+            <marker date="1431268796646" expanded="true" signature="5025:5171" placeholder="SELECT gid,s..ways..." />
+            <marker date="1431268796646" expanded="true" signature="5457:5491" placeholder="SELECT gid F..bounding_box_table..." />
+            <marker date="1431268796646" expanded="true" signature="7197:7266" placeholder="SELECT y1,x1..ways..." />
+            <marker date="1431268796646" expanded="true" signature="7197:7269" placeholder="SELECT y1,x1..ways..." />
+            <marker date="1431268796646" expanded="true" signature="7353:7408" placeholder="SELECT y1,x1..ways..." />
+            <marker date="1431268796646" expanded="true" signature="8234:8280" placeholder="SELECT y1,x1..ways..." />
+            <marker date="1431268796646" expanded="true" signature="8234:8282" placeholder="SELECT y1,x1..ways..." />
+            <marker date="1431268796646" expanded="true" signature="10660:10706" placeholder="SELECT y1,x1..ways..." />
+            <marker date="1431268796646" expanded="true" signature="12504:12593" placeholder="SELECT gid,s..ways..." />
+            <marker date="1431268796646" expanded="true" signature="13124:13313" placeholder="SELECT gid, ..bounding_box_table..." />
+            <marker date="1431268796646" expanded="true" signature="13706:13822" placeholder="SELECT gid,s..ways..." />
+            <marker date="1431268796646" expanded="true" signature="14039:14352" placeholder="SELECT DISTI..." />
+            <marker date="1431268796646" expanded="true" signature="14039:14365" placeholder="SELECT DISTI..." />
+            <marker date="1431268796646" expanded="true" signature="14394:14706" placeholder="SELECT seq, ..pgr_astar..." />
+            <marker date="1431268796646" expanded="true" signature="15975:16358" placeholder="SELECT DISTI..." />
+            <marker date="1431268796646" expanded="true" signature="17060:17081" placeholder="DELETE FROM ..." />
+            <marker date="1431268796646" expanded="true" signature="17172:17329" placeholder="SELECT id,la..measurements..." />
+            <marker date="1431268796646" expanded="true" signature="17761:17840" placeholder="INSERT INTO ..." />
+            <marker date="1431268796646" expanded="true" signature="18044:18067" placeholder="DELETE FROM ..." />
+            <marker date="1431268796646" expanded="true" signature="18159:18234" placeholder="SELECT gid,s..ways..." />
+            <marker date="1431268796646" expanded="true" signature="18599:18744" placeholder="INSERT INTO ..." />
+            <marker date="1431268796646" expanded="true" signature="19421:19517" placeholder="SELECT gid, ..measurements..." />
+            <marker date="1431268796646" expanded="true" signature="20793:21106" placeholder="SELECT DISTI..." />
+            <marker date="1431268796646" expanded="true" signature="21171:21212" placeholder="UPDATE ways ..." />
+            <marker date="1431268796646" expanded="true" signature="23537:23854" placeholder="SELECT DISTI..." />
+            <marker date="1431268796646" expanded="true" signature="23926:24003" placeholder="SELECT gid,t..buffer_geometry_table..." />
+            <marker date="1431268796646" expanded="true" signature="24826:24886" placeholder="UPDATE buffe..." />
+            <marker date="1431268796646" expanded="true" signature="25012:25072" placeholder="UPDATE buffe..." />
+            <marker date="1431268796646" expanded="true" signature="25201:25261" placeholder="UPDATE buffe..." />
+            <marker date="1431268796646" expanded="true" signature="25385:25445" placeholder="UPDATE buffe..." />
+            <marker date="1431268796646" expanded="true" signature="25558:25619" placeholder="UPDATE buffe..." />
+            <marker date="1431268796646" expanded="true" signature="25734:25794" placeholder="UPDATE buffe..." />
+            <marker date="1431268796646" expanded="true" signature="25912:25972" placeholder="UPDATE buffe..." />
+            <marker date="1431268796646" expanded="true" signature="26085:26146" placeholder="UPDATE buffe..." />
+            <marker date="1431268796646" expanded="true" signature="26506:26577" placeholder="SELECT sourc..buffer_geometry_table..." />
+            <marker date="1431268796646" expanded="true" signature="27380:27427" placeholder="SELECT sourc..buffer_geometry_table..." />
+            <marker date="1431268796646" expanded="true" signature="27728:27761" placeholder="DELETE FROM ..." />
+            <marker date="1431268796646" expanded="true" signature="27728:27781" placeholder="DELETE FROM ..." />
+            <marker date="1431268796646" expanded="true" signature="27728:27782" placeholder="DELETE FROM ..." />
+            <marker date="1431268796646" expanded="true" signature="27874:27928" placeholder="DELETE FROM ..." />
+            <marker date="1431268796646" expanded="true" signature="28190:28225" placeholder="SELECT * FRO..buffer_geometry_table..." />
+            <marker date="1431268796646" expanded="true" signature="28190:28247" placeholder="SELECT * FRO..buffer_geometry_table..." />
+            <marker date="1431268796646" expanded="true" signature="28266:28301" placeholder="SELECT * FRO..buffer_geometry_table..." />
+            <marker date="1431268796646" expanded="true" signature="28953:29270" placeholder="SELECT DISTI..." />
+            <marker date="1431268796646" expanded="true" signature="29349:29472" placeholder="SELECT gid A..." />
+            <marker date="1431268796646" expanded="true" signature="29673:29811" placeholder="SELECT gid A..." />
+            <marker date="1431268796646" expanded="true" signature="29673:29812" placeholder="SELECT gid A..." />
+            <marker date="1431268796646" expanded="true" signature="29911:30050" placeholder="SELECT gid A..." />
+            <marker date="1431268796646" expanded="true" signature="30162:30472" placeholder="SELECT DISTI..." />
+            <marker date="1431268796646" expanded="true" signature="30162:30485" placeholder="SELECT DISTI..." />
+            <marker date="1431268796646" expanded="true" signature="30576:30842" placeholder="SELECT seq, ..pgr_astar..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HTTPConnection.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.29535866" vertical-offset="90" max-vertical-offset="2400">
+          <caret line="20" column="41" selection-start-line="20" selection-start-column="41" selection-end-line="20" selection-end-column="41" />
+          <folding>
+            <element signature="e#24#85#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
