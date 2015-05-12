@@ -31,7 +31,8 @@ class Utils(object):
         return edge_id
 
 def get_ids_astar_heuristic_distance():
-    print("CODE GOES HERE")
+    # print("CODE GOES HERE")
+    pass
 
 
 """ QUERY TO create an aid bounding box"""
@@ -201,9 +202,9 @@ def display_lat_lon_given_edges_gid(tuples_edge_ids,order,psgres_cursor):
     #     print("(%f,%f),"%(dict_lat_lon_id[int(each)][0],dict_lat_lon_id[int(each)][1]))
     #     print("(%f,%f),"%(dict_lat_lon_id[int(each)][2],dict_lat_lon_id[int(each)][3]))
 
-    for each in tuples_edge_ids:
-        print("%f,%f"%(dict_lat_lon_id[int(each)][0],dict_lat_lon_id[int(each)][1]))
-        print("%f,%f"%(dict_lat_lon_id[int(each)][2],dict_lat_lon_id[int(each)][3]))
+    # for each in tuples_edge_ids:
+    #     print("%f,%f"%(dict_lat_lon_id[int(each)][0],dict_lat_lon_id[int(each)][1]))
+    #     print("%f,%f"%(dict_lat_lon_id[int(each)][2],dict_lat_lon_id[int(each)][3]))
 
 
 def get_lat_lon_given_id(tuples_edge_ids,psgres_cursor):
@@ -384,7 +385,7 @@ def construct_buffer_following_linestring(tuples_edge_ids,seq_and_geom_dict,psgr
 
     tuples_edge_ids = tuple(edge_ids)
 
-    print("EL total de elementos al construir el buffer es %d"% (len(tuples_edge_ids)))
+    # print("EL total de elementos al construir el buffer es %d"% (len(tuples_edge_ids)))
 
     query = "SELECT gid,source,target,length,to_cost,y1,x1,y2,x2 INTO buffer_geometry_table FROM ways WHERE gid IN %s ORDER BY y1"
     psgres_cursor.execute(query,[tuples_edge_ids])
@@ -485,8 +486,8 @@ def update_ways_sample_data(edge_ids,posgres_cursor,posgres_connection):
 
     posgres_cursor.execute(query_get_all_given_gid,[edge_ids])
     data = posgres_cursor.fetchall()
-    print("EHJAGSJHDGASJK KJDHSAKJD ASKJDH KJASDHKJ ASHDKJSA KDSAHKJD ASKJ")
-    print(data)
+    # print("EHJAGSJHDGASJK KJDHSAKJD ASKJDH KJASDHKJ ASHDKJSA KDSAHKJD ASKJ")
+    # print(data)
 
     # a trigger in the db COULD calculate the point geometries. NOW is not please check all triggers with
     # \dS <table_name>
@@ -542,8 +543,8 @@ def average_pollution_of_given_ids(edge_ids,posgres_cursor):
     return gidAndValue
 
 def classify_measurements():
-    print("hello")
-
+    # print("hello")
+    pass
 def update_cost_column_in_ways(dict_ret_val,posgres_cursor,postgres_connection):
 
     what = [(v,k) for k,v in dict_ret_val.iteritems()]
@@ -871,23 +872,23 @@ def get_route_edges_given_start_end_on_pollution(source,target,psgres_cursor):
 #     return data_string
 #     # print(data_string)
 
-def get_pollution_from_last_month():
-    print("hello")
-
-def get_pollution_from_last_week():
-    print("hello")
-
-def get_pollution_from_last_day():
-    print("hello")
-
-def get_pollution_from_last_month_given_time():
-    print("hello")
-
-def get_pollution_from_last_week_given_time():
-    print("hello")
-
-def get_pollution_from_last_day_given_time():
-    print("hello")
+# def get_pollution_from_last_month():
+#     print("hello")
+#
+# def get_pollution_from_last_week():
+#     print("hello")
+#
+# def get_pollution_from_last_day():
+#     print("hello")
+#
+# def get_pollution_from_last_month_given_time():
+#     print("hello")
+#
+# def get_pollution_from_last_week_given_time():
+#     print("hello")
+#
+# def get_pollution_from_last_day_given_time():
+#     print("hello")
 
 def main_program(start,end):
 
@@ -971,7 +972,7 @@ def main_program(start,end):
     psgres_connection.close()
     sql_connection.close()
 
-    print("Execution time= %f"%(time.time()-start_time))
+    # print("Execution time= %f"%(time.time()-start_time))
     # return coords_route
     return coordsWithpollution_route
 

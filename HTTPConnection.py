@@ -36,7 +36,8 @@ class HttpRequestHandler(BaseHTTPRequestHandler):
 
 class route_json_encoder():
     def __init__(self):
-        print("HELLO")
+        # print("HELLO")
+        pass
 
     def encode(self, route):
         route_dict = {}
@@ -65,7 +66,7 @@ def run():
     PORT = 5667
     server_add = (HOST_NAME, PORT)
     httpserv = HTTPServer(server_add, HttpRequestHandler)
-    print(time.asctime(),"Server started - %s-%s"%(HOST_NAME,PORT))
+    # print(time.asctime(),"Server started - %s-%s"%(HOST_NAME,PORT))
 
     try:
         httpserv.serve_forever()
@@ -73,7 +74,7 @@ def run():
         pass
     httpserv.server_close()
 
-    print(time.asctime(),"Server stopped - %s-%s"%(HOST_NAME,PORT))
+    # print(time.asctime(),"Server stopped - %s-%s"%(HOST_NAME,PORT))
 
 if __name__ == '__main__':
     run()
