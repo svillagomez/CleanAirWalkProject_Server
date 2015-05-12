@@ -378,7 +378,7 @@ def construct_buffer_following_linestring(tuples_edge_ids,seq_and_geom_dict,psgr
         if row[0] in tuples_edge_ids_int_list:
             # print("AGUANTAAAAA",inspect.currentframe().f_lineno)
             edge_ids.append(row[0])
-        if row[1]:
+        elif row[1]:
             edge_ids.append(row[0])
         delete_this_counter +=1
 
@@ -983,6 +983,6 @@ if __name__=="__main__":
     # start = [-37.813286, 144.651605]
     # end = [-38.126503, 145.189237]
 
-    start = [-37.806238, 144.955072]
-    end = [-37.797129, 144.967024]
+    start = [-37.870051, 144.906759]
+    end = [-37.880034, 144.976752]
     main_program(start,end)
