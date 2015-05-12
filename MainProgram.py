@@ -11,6 +11,7 @@ from operator import itemgetter
 from collections import Counter
 from collections import OrderedDict
 import json
+import inspect
 
 
 class Utils(object):
@@ -66,7 +67,7 @@ def create_bigger_bounding_box_with_astar(source,target,CONST,psgres_cursor):
     Distance.expand_box(coordinates[CONST.LAT_MIN_INDEX],coordinates[CONST.LONG_MIN_INDEX],
                      coordinates[CONST.LAT_MAX_INDEX],coordinates[CONST.LONG_MAX_INDEX])
     """EXPAND THE BOUNDING BOX"""
-    print("Coord bigger bounding box=",coordinates)
+    # print("Coord bigger bounding box=",coordinates)
 
     query_drop = "DROP TABLE IF EXISTS partial_result"
     psgres_cursor.execute(query_drop)
@@ -75,19 +76,8 @@ def create_bigger_bounding_box_with_astar(source,target,CONST,psgres_cursor):
 
 def calculate_bigger_bounding_box_given_route_gids(edges_tuples,CONST,psgres_cursor):
 
-    st_time = time.time()
-
-    # saved_partial_result = "partial_result"
+    # st_time = time.time()
     coordinates = [0.0]*4
-
-
-    # query_route_astar = \
-    # "SELECT DISTINCT id2 AS edge into %s " \
-    # "FROM pgr_astar('SELECT gid AS id,source::integer,target::integer,length::double precision AS cost,x1, y1, x2, y2 " \
-    # "FROM ways',%d,%d, false, false)"\
-    # %(saved_partial_result,source,target)
-    #
-    # psgres_cursor.execute(query_route_astar)
 
     lat_long_query = "SELECT max(x1),max(x2), min(x1),min(x2),max(y1),max(y2),min(y1),min(y2) FROM ways WHERE gid in %s"
     psgres_cursor.execute(lat_long_query,[edges_tuples])
@@ -107,27 +97,23 @@ def calculate_bigger_bounding_box_given_route_gids(edges_tuples,CONST,psgres_cur
     Distance.expand_box(coordinates[CONST.LAT_MIN_INDEX],coordinates[CONST.LONG_MIN_INDEX],
                      coordinates[CONST.LAT_MAX_INDEX],coordinates[CONST.LONG_MAX_INDEX])
     """EXPAND THE BOUNDING BOX"""
-    print("Coord bigger bounding box=",coordinates)
+    # print("Coord bigger bounding box=",coordinates)
 
     # query_drop = "DROP TABLE IF EXISTS partial_result"
     # psgres_cursor.execute(query_drop)
 
 
-    end_time = time.time()
+    # end_time = time.time()
 
-    print("execution time de calculate_bigger_bounding_box_given_route_gids es  %f" % (end_time-st_time))
+    # print("execution time de calculate_bigger_bounding_box_given_route_gids es  %f" % (end_time-st_time))
 
     return coordinates
 
 """QUERY ALL NODES WITHIN A BOUNDING BOX"""
 def get_edges_id_inside_bounding_box(coordinates,CONST,psgres_cursor):
 
-    # query_nodes_inside_bounding = "SELECT gid FROM ways where the_geom && ST_MakeEnvelope(%f,%f,%f,%f,4326)" \
-    #                               %(coordinates[CONST.LONG_MIN_INDEX],coordinates[CONST.LAT_MIN_INDEX],
-    #                                 coordinates[CONST.LONG_MAX_INDEX],coordinates[CONST.LAT_MAX_INDEX])
-    print(coordinates[CONST.LONG_MIN_INDEX],coordinates[CONST.LAT_MIN_INDEX],coordinates[CONST.LONG_MAX_INDEX],coordinates[CONST.LAT_MAX_INDEX])
-
-    query_nodes_inside_bounding = "SELECT gid,source,target,length,to_cost,x1,y1,x2,y2,the_geom INTO bounding_box_table FROM ways where the_geom && ST_MakeEnvelope(%f,%f,%f,%f,4326)" \
+    query_nodes_inside_bounding = "SELECT gid,source,target,length,to_cost,x1,y1,x2,y2,the_geom INTO bounding_box_table " \
+                                  "FROM ways where the_geom && ST_MakeEnvelope(%f,%f,%f,%f,4326)" \
                                   %(coordinates[CONST.LONG_MIN_INDEX],coordinates[CONST.LAT_MIN_INDEX],
                                     coordinates[CONST.LONG_MAX_INDEX],coordinates[CONST.LAT_MAX_INDEX])
 
@@ -140,14 +126,11 @@ def get_edges_id_inside_bounding_box(coordinates,CONST,psgres_cursor):
 
     edge_ids=[]
 
-    delete_this_counter = 0
     for row in edges:
         edge_ids.append(row[0])
-        delete_this_counter +=1
 
     tuples_edge_ids = tuple(edge_ids)
 
-    print("delete counter %d"%(delete_this_counter))
 
     return tuples_edge_ids
 
@@ -199,10 +182,6 @@ def correct_pair(first_pair,t1,t2):
 
 def display_lat_lon_given_edges_gid(tuples_edge_ids,order,psgres_cursor):
 
-    # for cada in tuples_edge_ids:
-    #     print(cada)
-
-    print(tuples_edge_ids)
     if order == True:
         query = "SELECT DISTINCT y1,x1,y2,x2,gid FROM ways WHERE gid in %s ORDER BY y1,x1"
         psgres_cursor.execute(query,[tuples_edge_ids])
@@ -240,32 +219,10 @@ def get_lat_lon_given_id(tuples_edge_ids,psgres_cursor):
 
     # keep the same order
     startAndEnd_coords_dict_gid = OrderedDict()
-    # route_coord = []
-    # for each in tuples_edge_ids:
-    #     item = dict_lat_lon_id[int(each)]
-    #     lat_lon = []
-    #     lat_lon.append(item[0])
-    #     lat_lon.append(item[1])
-    #     route_coord.append(tuple(lat_lon))
-    #     lat_lon = []
-    #     lat_lon.append(item[2])
-    #     lat_lon.append(item[3])
-    #     route_coord.append(tuple(lat_lon))
 
     # route_coord = []
     for each in tuples_edge_ids:
         startAndEnd_coords_dict_gid[each]=dict_lat_lon_id[int(each)]
-        # item = dict_lat_lon_id[int(each)]
-        # lat_lon = []
-        # lat_lon.append(item[0])
-        # lat_lon.append(item[1])
-        # route_coord.append(tuple(lat_lon))
-        # lat_lon = []
-        # lat_lon.append(item[2])
-        # lat_lon.append(item[3])
-        # route_coord.append(tuple(lat_lon))
-    print(tuples_edge_ids)
-    print(startAndEnd_coords_dict_gid)
 
     ret_val = []
     edges = []
@@ -308,7 +265,7 @@ def get_lat_lon_pollution_given_id(tuples_edge_ids,gid_with_pollutionAverage_tup
 
     dict_lat_lon_id ={}
     # print(gid_with_pollutionAverage_dict)
-    # keep the same order as the imput gid_tuples
+    # keep the same order as the iput gid_tuples
     for item in data:
         # the gid must be the key for the dictionary. is located at position 4
         key = item[4]
@@ -343,27 +300,37 @@ def get_lat_lon_pollution_given_id(tuples_edge_ids,gid_with_pollutionAverage_tup
     return ret_val
 
 
-def construct_buffer_following_linestring(tuples_edge_ids,psgres_cursor):
-    # print("POR LA GRABDE UCTA %d"%(len(tuples_edge_ids)))
-    # query = "SELECT gid,source,target,length,to_cost,y1,x1,y2,x2 INTO buffer_geometry_table FROM ways WHERE gid IN %s ORDER BY y1"
-    query = "SELECT gid,source,target,length,to_cost,y1,x1,y2,x2 FROM ways WHERE gid IN %s ORDER BY y1"
+def construct_buffer_following_linestring(tuples_edge_ids,seq_and_geom_dict,psgres_cursor):
+    seq_and_geom_dict.pop(len(seq_and_geom_dict)-1)
 
+    # print(seq_and_geom_dict)
+
+    query = "SELECT gid,source,target,length,to_cost,y1,x1,y2,x2 FROM ways WHERE gid IN %s"
     psgres_cursor.execute(query,[tuples_edge_ids])
+    answer = psgres_cursor.fetchall()
 
-    data = psgres_cursor.fetchall()
+    data= []
+
+    dict_aid = {}
+    for item in answer:
+        dict_aid[item[0]] = item
+
+    for key in seq_and_geom_dict:
+        data.append(tuple(dict_aid[seq_and_geom_dict[key]]))
 
     total = len(data)
-    # print(total)
 
     Y1_INDEX = 5
     X1_INDEX = 6
+    Y2_INDEX = 7
+    X2_INDEX = 8
     res = ""
     aux_counter = 0
 
     if total>100:
-        divisor = 10
+        divisor = 5
     elif total>50:
-        divisor = 7
+        divisor = 3
     else:
         divisor = 2;
 
@@ -372,19 +339,45 @@ def construct_buffer_following_linestring(tuples_edge_ids,psgres_cursor):
             res += str(item[X1_INDEX])+" "+str(item[Y1_INDEX])+","
         aux_counter += 1
 
+    # always include the last element just in case
+    res += str(item[X1_INDEX])+" "+str(item[Y1_INDEX])+","
+    res += str(item[X2_INDEX])+" "+str(item[Y2_INDEX])+","
+
     res = res[:-1]
 
-    query_nodes_inside_bounding = "SELECT gid, ST_DWITHIN(ST_Buffer(ST_GeomFromText('LINESTRING(" + res +\
-                                  ")',4326),0.008,'endcap=round join=round'),the_geom,0.0009) FROM bounding_box_table"
+    # query_nodes_inside_bounding = "SELECT gid, ST_DWITHIN(ST_Buffer(ST_GeomFromText('LINESTRING(" + res +\
+    #                               ")',4326),0.008,'endcap=round join=round'),the_geom,0.0009) FROM bounding_box_table"
+
+    # print("EL SEQ WITH GEOM=",seq_and_geom_dict,inspect.currentframe().f_lineno)
+
+
+    query_nodes_inside_bounding = "SELECT gid, ST_Contains(ST_Buffer(ST_GeomFromText('LINESTRING(" + res +\
+                                  ")',4326),0.008,'endcap=round join=round'),the_geom::geometry) FROM bounding_box_table"
+
+    # query_nodes_inside_bounding = "SELECT gid, ST_Contains(ST_Buffer(ST_GeomFromText('LINESTRING(" + res +\
+    #                               ")',4326),0.008,'endcap=round join=round'),the_geom) FROM bounding_box_table"
+
+
+    # query_nodes_inside_bounding = "SELECT gid, the_geom FROM bounding_box_table"
 
     psgres_cursor.execute(query_nodes_inside_bounding)
     edges = psgres_cursor.fetchall()
 
-
+    # print(edges)
     edge_ids=[]
+
+    # print(tuples_edge_ids)
+
+    tuples_edge_ids_str_list = list(tuples_edge_ids)
+
+    # http://stackoverflow.com/questions/7368789/convert-all-strings-in-a-list-to-int
+    tuples_edge_ids_int_list = map(int,tuples_edge_ids_str_list)
 
     delete_this_counter = 0
     for row in edges:
+        if row[0] in tuples_edge_ids_int_list:
+            # print("AGUANTAAAAA",inspect.currentframe().f_lineno)
+            edge_ids.append(row[0])
         if row[1]:
             edge_ids.append(row[0])
         delete_this_counter +=1
@@ -420,9 +413,14 @@ def get_route_edges_given_start_end(source,target,psgres_cursor):
 
     edges = []
 
+    seq_and_geom_dict = OrderedDict()
+
     REAL_GID_INDEX = 2
+    # THE_GEOM_INDEX = 4
+    SEQ_INDEX = 0
     for row in rows:
         edges.append(str(row[REAL_GID_INDEX]))
+        seq_and_geom_dict[row[SEQ_INDEX]]=row[REAL_GID_INDEX]
 
     # get rid of last element
     edges.pop()
@@ -430,7 +428,7 @@ def get_route_edges_given_start_end(source,target,psgres_cursor):
 
     edges_tuples = tuple(edges)
 
-    return edges_tuples
+    return edges_tuples,seq_and_geom_dict
 
 def get_route_edges_given_start_end_within_bounding_box_cost(source,target,psgres_cursor,coordinates):
     query_route_astar = "SELECT DISTINCT ON (seq) seq, id1 AS node, id2 AS edge, cost, b.the_geom FROM pgr_astar(" \
@@ -601,7 +599,7 @@ def classify_ids_into_ranks(sorted_tuples):
 
 def update_cost_column_in_buffer(gidAndPollution_tuples,posgres_cursor,postgres_connection):
 
-    print("LON de update_cost_column_in_buffer %d"% (len(gidAndPollution_tuples)))
+    # print("LON de update_cost_column_in_buffer %d"% (len(gidAndPollution_tuples)))
     # print(dict_ret_val[5])
 
     # partial_dict = []
@@ -667,7 +665,7 @@ def update_cost_column_in_buffer(gidAndPollution_tuples,posgres_cursor,postgres_
     #     print(cada[POLLUTION_AVE_INDEX])
 
     # print(todos)
-    print("arriba el ANTES update_cost_column_in_buffer LOS TODOS= %d"%(len(todos)))
+    # print("arriba el ANTES update_cost_column_in_buffer LOS TODOS= %d"%(len(todos)))
 
 
     # query_set_cost = "UPDATE bounding_box_table SET to_cost = %s WHERE gid = %s"
@@ -771,8 +769,8 @@ def get_route_edges_given_start_end_on_pollution(source,target,psgres_cursor):
     # psgres_cursor.execute(query_borrar,[tuple(all_target)])
 
 
-    query_borrar_dos = "DELETE FROM buffer_geometry_table WHERE target NOT IN %s"
-    psgres_cursor.execute(query_borrar_dos,[tuple(all_source)])
+    # query_borrar_dos = "DELETE FROM buffer_geometry_table WHERE target NOT IN %s"
+    # psgres_cursor.execute(query_borrar_dos,[tuple(all_source)])
 
 
 
@@ -820,6 +818,10 @@ def get_route_edges_given_start_end_on_pollution(source,target,psgres_cursor):
     # ch1 = "SELECT gid AS id,source::integer,target::integer,length::double precision AS cost,x1, y1, x2, y2 FROM buffer_geometry_table where target = %s"
     # psgres_cursor.execute(ch1,(target,))
     # print(psgres_cursor.fetchall())
+
+    # chii = "SELECT gid, y1,x1,y2,x2 from buffer_geometry_table where source = 62035"
+    # psgres_cursor.execute(chii)
+    # print("PROBAR SI EXISTE = ",psgres_cursor.fetchall(),inspect.currentframe().f_lineno)
 
 
     query_route_astar = "SELECT DISTINCT ON (seq) seq, id1 AS node, id2 AS edge, cost FROM pgr_astar(" \
@@ -912,10 +914,7 @@ def main_program(start,end):
     source = utils.find_nearest_vertice_id(start_lat,start_lon)
     target = utils.find_nearest_vertice_id(end_lat,end_lon)
 
-
-    # print("Source = %d"%(source))
-    # print("Target = %d"%(target))
-
+    # print("Start = ",source)
     # et = time.time()
     # print("Looping:%f"%(et-st))
 
@@ -926,8 +925,8 @@ def main_program(start,end):
     # edge_ids = get_edges_id_inside_bounding_box(coordinates,CONST,psgres_cursor)
     # print_lat_lon_given_edges_gid(edge_ids,False,psgres_cursor)
 
-    route_edge_ids = get_route_edges_given_start_end(source,target,psgres_cursor)
-    display_lat_lon_given_edges_gid(route_edge_ids,False,psgres_cursor)
+    route_edge_ids,seq_and_geom_dict = get_route_edges_given_start_end(source,target,psgres_cursor)
+    # display_lat_lon_given_edges_gid(route_edge_ids,False,psgres_cursor)
     coordinates = calculate_bigger_bounding_box_given_route_gids(route_edge_ids,CONST,psgres_cursor)
     t1 = time.time()
     edge_ids = get_edges_id_inside_bounding_box(coordinates,CONST,psgres_cursor)
@@ -937,9 +936,9 @@ def main_program(start,end):
 
 
     # print_lat_lon_given_edges_gid(route_edge_ids, False,psgres_cursor)
-    all_ids = construct_buffer_following_linestring(route_edge_ids,psgres_cursor)
+    all_ids = construct_buffer_following_linestring(route_edge_ids,seq_and_geom_dict,psgres_cursor)
     # print("EL total devuelto por el que contruye el buffer %d" % (len(all_ids)))
-    # get_lat_lon_given_edges_gid(all_ids, True,psgres_cursor)
+    # display_lat_lon_given_edges_gid(all_ids, False,psgres_cursor)
 
     gid_with_pollutionAverage_tuples = average_pollution_of_given_ids(all_ids,psgres_cursor)
 
@@ -956,8 +955,8 @@ def main_program(start,end):
     coords_route = get_lat_lon_given_id(new_route,psgres_cursor)
     coordsWithpollution_route = get_lat_lon_pollution_given_id(new_route,gid_with_pollutionAverage_tuples,psgres_cursor)
 
-    print(coords_route)
-    print(coordsWithpollution_route)
+    # print(coords_route)
+    # print(coordsWithpollution_route)
 
     # the next line is use to show the pollution all around the bigger bounding box
     # update_cost_column_in_ways(gid_with_pollutionAverage_tuples,psgres_cursor,psgres_connection)
@@ -977,6 +976,13 @@ def main_program(start,end):
     return coordsWithpollution_route
 
 if __name__=="__main__":
-    start = [-37.772535, 144.963891]
-    end = [-37.866060, 144.996261]
+
+    # http://146.118.96.26:5667/q?start=-37.81251062903823&start=144.953251183033&end=-37.802910661590445&end=144.95539963245392
+
+    # # ountos que daban error ruta que daba error
+    # start = [-37.813286, 144.651605]
+    # end = [-38.126503, 145.189237]
+
+    start = [-37.806238, 144.955072]
+    end = [-37.797129, 144.967024]
     main_program(start,end)

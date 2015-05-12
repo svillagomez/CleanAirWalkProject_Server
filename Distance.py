@@ -13,7 +13,7 @@ def expand_box(lat1, long1, lat2, long2):
     # print("%s,%s,%s,%s"%(lat1,long1,lat2,long2))
 
     # km
-    distance = 0.40
+    distance = 0.8
 
     if(lat1>lat2):
         new_up = lat1 + (distance/EARTH_RADIUS)*(180/math.pi)
