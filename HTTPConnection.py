@@ -71,7 +71,9 @@ def run():
     try:
         httpserv.serve_forever()
     except KeyboardInterrupt:
-        pass
+        httpserv.shutdown()
+        httpserv.server_close()
+    httpserv.shutdown()
     httpserv.server_close()
 
     # print(time.asctime(),"Server stopped - %s-%s"%(HOST_NAME,PORT))
