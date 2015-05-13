@@ -63,7 +63,7 @@ class ParamParser():
 
 def run():
     HOST_NAME = ""
-    PORT = 5667
+    PORT = 5678
     server_add = (HOST_NAME, PORT)
     httpserv = HTTPServer(server_add, HttpRequestHandler)
     # print(time.asctime(),"Server started - %s-%s"%(HOST_NAME,PORT))
