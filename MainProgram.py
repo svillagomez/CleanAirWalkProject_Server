@@ -300,6 +300,96 @@ def get_lat_lon_pollution_given_id(tuples_edge_ids,gid_with_pollutionAverage_tup
         # print(ret_val)
     return ret_val
 
+def get_lat_lon_pollution_given_id(tuples_edge_ids,gid_with_pollutionAverage_tuples,psgres_cursor):
+    # if do_order == True:
+    query = "SELECT y1,x1,y2,x2,gid FROM ways WHERE gid in %s"
+    psgres_cursor.execute(query,[tuples_edge_ids])
+    data = psgres_cursor.fetchall()
+
+    gid_with_pollutionAverage_dict = dict(gid_with_pollutionAverage_tuples)
+    # print(gid_with_pollutionAverage_dict)
+
+    dict_lat_lon_id ={}
+    # print(gid_with_pollutionAverage_dict)
+    # keep the same order as the iput gid_tuples
+    for item in data:
+        # the gid must be the key for the dictionary. is located at position 4
+        key = item[4]
+        dict_lat_lon_id[key]=[item[0],item[1],item[2],item[3],gid_with_pollutionAverage_dict[key]]
+
+    # keep the same order
+    startAndEnd_coords_dict_gid = OrderedDict()
+    for each in tuples_edge_ids:
+        startAndEnd_coords_dict_gid[each]=dict_lat_lon_id[int(each)]
+        # print(dict_lat_lon_id[int(each)])
+
+    ret_val = []
+    edges = []
+    counter = 0
+    for item in startAndEnd_coords_dict_gid:
+        if counter < 2:
+            edges.append(startAndEnd_coords_dict_gid[item])
+        elif counter == 2:
+            first_edge = edges[0]
+            second_edge = edges[1]
+            first_edge,second_edge = correct_pair(True,first_edge,second_edge)
+            edge = second_edge
+            ret_val.append(first_edge)
+            ret_val.append(second_edge)
+        elif counter >2:
+            next_edge = startAndEnd_coords_dict_gid[item]
+            edge,next_edge = correct_pair(False,edge,next_edge)
+            ret_val.append(next_edge)
+            edge = next_edge
+        counter += 1
+        # print(ret_val)
+    return ret_val
+
+def get_lat_lon_pollution_length_given_id(tuples_edge_ids,gid_with_pollutionAverage_tuples,psgres_cursor):
+    # if do_order == True:
+    query = "SELECT y1,x1,y2,x2,gid,length FROM ways WHERE gid in %s"
+    psgres_cursor.execute(query,[tuples_edge_ids])
+    data = psgres_cursor.fetchall()
+
+    gid_with_pollutionAverage_dict = dict(gid_with_pollutionAverage_tuples)
+    # print(gid_with_pollutionAverage_dict)
+
+    dict_lat_lon_id ={}
+    # print(gid_with_pollutionAverage_dict)
+    # keep the same order as the iput gid_tuples
+    for item in data:
+        # the gid must be the key for the dictionary. is located at position 4
+        key = item[4]
+        dict_lat_lon_id[key]=[item[0],item[1],item[2],item[3],gid_with_pollutionAverage_dict[key],item[5]]
+
+    # keep the same order
+    startAndEnd_coords_dict_gid = OrderedDict()
+    for each in tuples_edge_ids:
+        startAndEnd_coords_dict_gid[each]=dict_lat_lon_id[int(each)]
+        # print(dict_lat_lon_id[int(each)])
+
+    ret_val = []
+    edges = []
+    counter = 0
+    for item in startAndEnd_coords_dict_gid:
+        if counter < 2:
+            edges.append(startAndEnd_coords_dict_gid[item])
+        elif counter == 2:
+            first_edge = edges[0]
+            second_edge = edges[1]
+            first_edge,second_edge = correct_pair(True,first_edge,second_edge)
+            edge = second_edge
+            ret_val.append(first_edge)
+            ret_val.append(second_edge)
+        elif counter >2:
+            next_edge = startAndEnd_coords_dict_gid[item]
+            edge,next_edge = correct_pair(False,edge,next_edge)
+            ret_val.append(next_edge)
+            edge = next_edge
+        counter += 1
+        # print(ret_val)
+    return ret_val
+
 
 def construct_buffer_following_linestring(tuples_edge_ids,seq_and_geom_dict,psgres_cursor):
     seq_and_geom_dict.pop(len(seq_and_geom_dict)-1)
@@ -955,17 +1045,7 @@ def main_program(start,end):
     # coords_route = get_lat_lon_given_id(new_route,True,psgres_cursor)
     coords_route = get_lat_lon_given_id(new_route,psgres_cursor)
     coordsWithpollution_route = get_lat_lon_pollution_given_id(new_route,gid_with_pollutionAverage_tuples,psgres_cursor)
-
-    # print(coords_route)
-    # print(coordsWithpollution_route)
-
-    # the next line is use to show the pollution all around the bigger bounding box
-    # update_cost_column_in_ways(gid_with_pollutionAverage_tuples,psgres_cursor,psgres_connection)
-
-    #make the final route query taking into account the pollution data
-    # new_route = get_route_edges_given_start_end_within_bounding_box_cost(source,target,psgres_cursor,coordinates)
-    # print_lat_lon_given_edges_gid(new_route,psgres_cursor)
-
+    coord_pollution_length = get_lat_lon_pollution_length_given_id(new_route,gid_with_pollutionAverage_tuples,psgres_cursor)
 
 
     psgres_cursor.close()
@@ -974,7 +1054,7 @@ def main_program(start,end):
 
     # print("Execution time= %f"%(time.time()-start_time))
     # return coords_route
-    return coordsWithpollution_route
+    return coord_pollution_length
 
 if __name__=="__main__":
 
