@@ -654,7 +654,7 @@ def classify_ids_into_ranks(sorted_tuples):
     # THRESHOLD_MIDDLE = 35.0
     # THRESHOLD_DOWN = 12.5
 
-    max_value = get_max_pollution_value()
+    max_value = get_max_pollution_value()[0]
 
     THRESHOLD_UP = (3.0*max_value/4.0)
     THRESHOLD_MIDDLE = (2.0*max_value/4.0)
