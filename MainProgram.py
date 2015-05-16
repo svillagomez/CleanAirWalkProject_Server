@@ -783,15 +783,15 @@ def update_cost_column_in_buffer(gidAndPollution_tuples,posgres_cursor,postgres_
 
 
     if len(g_high) > 0:
-        query_set_cost = "UPDATE buffer_geometry_table SET to_cost = 2.5 WHERE gid IN %s"
+        query_set_cost = "UPDATE buffer_geometry_table SET to_cost = 8.0 WHERE gid IN %s"
         posgres_cursor.execute(query_set_cost,[g_high])
 
     if len(g_mid_high) > 0:
-        query_set_cost = "UPDATE buffer_geometry_table SET to_cost = 2.0 WHERE gid IN %s"
+        query_set_cost = "UPDATE buffer_geometry_table SET to_cost = 6.0 WHERE gid IN %s"
         posgres_cursor.execute(query_set_cost,[g_mid_high])
 
     if len(g_mid_low) > 0:
-        query_set_cost = "UPDATE buffer_geometry_table SET to_cost = 1.5 WHERE gid IN %s"
+        query_set_cost = "UPDATE buffer_geometry_table SET to_cost = 3.0 WHERE gid IN %s"
         posgres_cursor.execute(query_set_cost,[g_mid_low])
 
     if len(g_low) > 0:
@@ -1003,7 +1003,7 @@ def main_program(start,end):
 
     new_route = get_route_edges_given_start_end_on_pollution(source,target,psgres_cursor)
 
-    # display_lat_lon_given_edges_gid(new_route,False,psgres_cursor)
+    display_lat_lon_given_edges_gid(new_route,False,psgres_cursor)
 
     # coords_route = get_lat_lon_given_id(new_route,True,psgres_cursor)
     coords_route = get_lat_lon_given_id(new_route,psgres_cursor)
@@ -1025,6 +1025,6 @@ if __name__=="__main__":
     # start = [-37.813286, 144.651605]
     # end = [-38.126503, 145.189237]
 
-    start = [-37.805089, 144.950756]
-    end = [-37.759767, 144.904212]
+    start = [-37.805598, 144.963075]
+    end = [-37.797205, 144.964470]
     main_program(start,end)
