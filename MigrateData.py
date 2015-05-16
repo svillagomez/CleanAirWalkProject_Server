@@ -38,8 +38,6 @@ def get_data_since_last_update(lastest_update,stream_ids,sql_cursor):
     sql_cursor.execute(sql_query_lat_lon_value,[stream_ids])
 
     data = sql_cursor.fetchall()
-    # for item in data:
-    #     print(item)
 
     return data
 
@@ -63,8 +61,8 @@ def update():
 
     insert_data_into_measurements_table(data,postgres_cursor,postgres_conn)
 
-    print("Updating time = %f sec"%(time.time()-start_time))
+    # print("Updating time = %f sec"%(time.time()-start_time))
 
-    print("SUCCESFUL")
+    # print("SUCCESFUL")
 
 update()

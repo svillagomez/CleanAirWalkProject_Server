@@ -1,17 +1,12 @@
 __author__ = 'santiago'
 
-# import psycopg2
 import time
 import Distance
-# import MySQLdb
 import Constants as CONST
 from DBConnection import *
 from itertools import groupby
 from operator import itemgetter
-from collections import Counter
 from collections import OrderedDict
-import json
-import inspect
 
 
 class Utils(object):
@@ -61,7 +56,6 @@ def create_bigger_bounding_box_with_astar(source,target,CONST,psgres_cursor):
         coordinates[CONST.LAT_MIN_INDEX] = min(each[6],each[7])
 
     # print("Coord bigger smaller box=",coordinates)
-    # print(coordinates)
     """EXPAND THE BOUNDING BOX"""
     coordinates[CONST.LONG_MIN_INDEX], coordinates[CONST.LONG_MAX_INDEX],\
     coordinates[CONST.LAT_MAX_INDEX],coordinates[CONST.LAT_MIN_INDEX] =\
@@ -77,7 +71,6 @@ def create_bigger_bounding_box_with_astar(source,target,CONST,psgres_cursor):
 
 def calculate_bigger_bounding_box_given_route_gids(edges_tuples,CONST,psgres_cursor):
 
-    # st_time = time.time()
     coordinates = [0.0]*4
 
     lat_long_query = "SELECT max(x1),max(x2), min(x1),min(x2),max(y1),max(y2),min(y1),min(y2) FROM ways WHERE gid in %s"
@@ -91,22 +84,12 @@ def calculate_bigger_bounding_box_given_route_gids(edges_tuples,CONST,psgres_cur
         coordinates[CONST.LAT_MIN_INDEX] = min(each[6],each[7])
 
     # print("Coord bigger smaller box=",coordinates)
-    # print(coordinates)
     """EXPAND THE BOUNDING BOX"""
     coordinates[CONST.LONG_MIN_INDEX], coordinates[CONST.LONG_MAX_INDEX],\
     coordinates[CONST.LAT_MAX_INDEX],coordinates[CONST.LAT_MIN_INDEX] =\
     Distance.expand_box(coordinates[CONST.LAT_MIN_INDEX],coordinates[CONST.LONG_MIN_INDEX],
                      coordinates[CONST.LAT_MAX_INDEX],coordinates[CONST.LONG_MAX_INDEX])
     """EXPAND THE BOUNDING BOX"""
-    # print("Coord bigger bounding box=",coordinates)
-
-    # query_drop = "DROP TABLE IF EXISTS partial_result"
-    # psgres_cursor.execute(query_drop)
-
-
-    # end_time = time.time()
-
-    # print("execution time de calculate_bigger_bounding_box_given_route_gids es  %f" % (end_time-st_time))
 
     return coordinates
 
@@ -189,7 +172,6 @@ def display_lat_lon_given_edges_gid(tuples_edge_ids,order,psgres_cursor):
     else:
         query = "SELECT DISTINCT y1,x1,y2,x2,gid FROM ways WHERE gid in %s"
         psgres_cursor.execute(query,[tuples_edge_ids])
-        # print("por aqui paso la ejecucion")
 
     data = psgres_cursor.fetchall()
 
@@ -202,9 +184,9 @@ def display_lat_lon_given_edges_gid(tuples_edge_ids,order,psgres_cursor):
     #     print("(%f,%f),"%(dict_lat_lon_id[int(each)][0],dict_lat_lon_id[int(each)][1]))
     #     print("(%f,%f),"%(dict_lat_lon_id[int(each)][2],dict_lat_lon_id[int(each)][3]))
 
-    # for each in tuples_edge_ids:
-    #     print("%f,%f"%(dict_lat_lon_id[int(each)][0],dict_lat_lon_id[int(each)][1]))
-    #     print("%f,%f"%(dict_lat_lon_id[int(each)][2],dict_lat_lon_id[int(each)][3]))
+    for each in tuples_edge_ids:
+        print("%f,%f"%(dict_lat_lon_id[int(each)][0],dict_lat_lon_id[int(each)][1]))
+        print("%f,%f"%(dict_lat_lon_id[int(each)][2],dict_lat_lon_id[int(each)][3]))
 
 
 def get_lat_lon_given_id(tuples_edge_ids,psgres_cursor):
@@ -445,12 +427,6 @@ def construct_buffer_following_linestring(tuples_edge_ids,seq_and_geom_dict,psgr
     query_nodes_inside_bounding = "SELECT gid, ST_Contains(ST_Buffer(ST_GeomFromText('LINESTRING(" + res +\
                                   ")',4326),0.008,'endcap=round join=round'),the_geom::geometry) FROM bounding_box_table"
 
-    # query_nodes_inside_bounding = "SELECT gid, ST_Contains(ST_Buffer(ST_GeomFromText('LINESTRING(" + res +\
-    #                               ")',4326),0.008,'endcap=round join=round'),the_geom) FROM bounding_box_table"
-
-
-    # query_nodes_inside_bounding = "SELECT gid, the_geom FROM bounding_box_table"
-
     psgres_cursor.execute(query_nodes_inside_bounding)
     edges = psgres_cursor.fetchall()
 
@@ -576,8 +552,6 @@ def update_ways_sample_data(edge_ids,posgres_cursor,posgres_connection):
 
     posgres_cursor.execute(query_get_all_given_gid,[edge_ids])
     data = posgres_cursor.fetchall()
-    # print("EHJAGSJHDGASJK KJDHSAKJD ASKJDH KJASDHKJ ASHDKJSA KDSAHKJD ASKJ")
-    # print(data)
 
     # a trigger in the db COULD calculate the point geometries. NOW is not please check all triggers with
     # \dS <table_name>
@@ -686,6 +660,19 @@ def classify_ids_into_ranks(sorted_tuples):
             group_lowest.append(item[0])
 
     return tuple(group_lowest),tuple(group_mid_low),tuple(group_mid_high),tuple(group_highest)
+
+def get_max_pollution_value():
+    db_connection = Connection()
+    psgres_cursor,psgres_connection = db_connection.connect_to_postgres_db()
+
+    query_max = "SELECT max(measured_value) FROM measurements"
+    psgres_cursor.execute(query_max)
+    data = psgres_cursor.fetchall()
+
+    ret_val = list(data[0])
+
+    # print("EL maximo de pollution es:",ret_val)
+    return ret_val
 
 
 def update_cost_column_in_buffer(gidAndPollution_tuples,posgres_cursor,postgres_connection):
@@ -1015,12 +1002,16 @@ def main_program(start,end):
     # print("El tiempo seria: %f"%(t2-t1))
     # edge_ids = get_edges_id_inside_bounding_box(coordinates,CONST,psgres_cursor)
     # print_lat_lon_given_edges_gid(edge_ids,False,psgres_cursor)
+    get_max_pollution_value()
 
     route_edge_ids,seq_and_geom_dict = get_route_edges_given_start_end(source,target,psgres_cursor)
+
     # display_lat_lon_given_edges_gid(route_edge_ids,False,psgres_cursor)
     coordinates = calculate_bigger_bounding_box_given_route_gids(route_edge_ids,CONST,psgres_cursor)
     t1 = time.time()
     edge_ids = get_edges_id_inside_bounding_box(coordinates,CONST,psgres_cursor)
+    # display_lat_lon_given_edges_gid(edge_ids,False,psgres_cursor)
+    # print("borrar1=",len(edge_ids))
     # get_lat_lon_given_edges_gid(edge_ids,False,psgres_cursor)
     t2 = time.time()
     # print("El tiempo seria: %f"%(t2-t1))
@@ -1028,6 +1019,7 @@ def main_program(start,end):
 
     # print_lat_lon_given_edges_gid(route_edge_ids, False,psgres_cursor)
     all_ids = construct_buffer_following_linestring(route_edge_ids,seq_and_geom_dict,psgres_cursor)
+    # print("borrar2=",len(all_ids))
     # print("EL total devuelto por el que contruye el buffer %d" % (len(all_ids)))
     # display_lat_lon_given_edges_gid(all_ids, False,psgres_cursor)
 
@@ -1040,7 +1032,7 @@ def main_program(start,end):
 
     new_route = get_route_edges_given_start_end_on_pollution(source,target,psgres_cursor)
 
-    display_lat_lon_given_edges_gid(new_route,False,psgres_cursor)
+    # display_lat_lon_given_edges_gid(new_route,False,psgres_cursor)
 
     # coords_route = get_lat_lon_given_id(new_route,True,psgres_cursor)
     coords_route = get_lat_lon_given_id(new_route,psgres_cursor)
@@ -1064,6 +1056,8 @@ if __name__=="__main__":
     # start = [-37.813286, 144.651605]
     # end = [-38.126503, 145.189237]
 
-    start = [-37.870051, 144.906759]
-    end = [-37.880034, 144.976752]
+    start = [-37.805089, 144.950756]
+    # -37.759767, 144.904212
+    # end = [-37.759767, 144.904212]
+    end = [-37.798444, 144.965790]
     main_program(start,end)
