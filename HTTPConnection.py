@@ -3,6 +3,7 @@ from BaseHTTPServer import BaseHTTPRequestHandler, HTTPServer
 import os
 from MainProgram import main_program
 from MainProgram import get_max_pollution_value
+from MigrateData import update
 import time
 import urlparse
 # from urlparse import urlparse
@@ -29,19 +30,7 @@ class HttpRequestHandler(BaseHTTPRequestHandler):
             max_val_json = my_encoder.encode(ret_val)
             self.send_response(200,max_val_json)
 
-
-        # print(myurlparse.parse_qs(os.environ['']))
-        # print("CAlled from:",self.path())
-        # route = main_program()
-        # my_encoder = route_json_encoder()
-        # coord_json = my_encoder.encode(route)
-        # self.send_header()
-        # self.send_response(200,coord_json)
-        # self.send_header('Content type','text-html')
-        # self.end_headers()
-        # self.wfile.write(coord_json)
-        # print("HELLO")
-        return
+        update()
 
 class route_json_encoder():
     def __init__(self):
