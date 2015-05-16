@@ -634,15 +634,31 @@ def update_cost_column_in_ways(dict_ret_val,posgres_cursor,postgres_connection):
     # endtt = time.time()
     # print("comparing= %f"%(endtt-stt))
 
+def get_max_pollution_value():
+    db_connection = Connection()
+    psgres_cursor,psgres_connection = db_connection.connect_to_postgres_db()
+
+    query_max = "SELECT max(measured_value) FROM measurements"
+    psgres_cursor.execute(query_max)
+    data = psgres_cursor.fetchall()
+
+    ret_val = list(data[0])
+
+    # print("EL maximo de pollution es:",ret_val)
+    return ret_val
+
+
 def classify_ids_into_ranks(sorted_tuples):
 
     # THRESHOLD_UP = 55.0
     # THRESHOLD_MIDDLE = 35.0
     # THRESHOLD_DOWN = 12.5
 
-    THRESHOLD_UP = 4.0
-    THRESHOLD_MIDDLE = 2.5
-    THRESHOLD_DOWN = 2.0
+    max_value = get_max_pollution_value()
+
+    THRESHOLD_UP = (3.0*max_value/4.0)
+    THRESHOLD_MIDDLE = (2.0*max_value/4.0)
+    THRESHOLD_DOWN = (1.0*max_value/4.0)
 
     group_highest = []
     group_mid_high = []
@@ -661,18 +677,6 @@ def classify_ids_into_ranks(sorted_tuples):
 
     return tuple(group_lowest),tuple(group_mid_low),tuple(group_mid_high),tuple(group_highest)
 
-def get_max_pollution_value():
-    db_connection = Connection()
-    psgres_cursor,psgres_connection = db_connection.connect_to_postgres_db()
-
-    query_max = "SELECT max(measured_value) FROM measurements"
-    psgres_cursor.execute(query_max)
-    data = psgres_cursor.fetchall()
-
-    ret_val = list(data[0])
-
-    # print("EL maximo de pollution es:",ret_val)
-    return ret_val
 
 
 def update_cost_column_in_buffer(gidAndPollution_tuples,posgres_cursor,postgres_connection):
@@ -779,19 +783,19 @@ def update_cost_column_in_buffer(gidAndPollution_tuples,posgres_cursor,postgres_
 
 
     if len(g_high) > 0:
-        query_set_cost = "UPDATE buffer_geometry_table SET to_cost = 10.0 WHERE gid IN %s"
+        query_set_cost = "UPDATE buffer_geometry_table SET to_cost = 2.5 WHERE gid IN %s"
         posgres_cursor.execute(query_set_cost,[g_high])
 
     if len(g_mid_high) > 0:
-        query_set_cost = "UPDATE buffer_geometry_table SET to_cost = 6.0 WHERE gid IN %s"
+        query_set_cost = "UPDATE buffer_geometry_table SET to_cost = 2.0 WHERE gid IN %s"
         posgres_cursor.execute(query_set_cost,[g_mid_high])
 
     if len(g_mid_low) > 0:
-        query_set_cost = "UPDATE buffer_geometry_table SET to_cost = 6.0 WHERE gid IN %s"
+        query_set_cost = "UPDATE buffer_geometry_table SET to_cost = 1.5 WHERE gid IN %s"
         posgres_cursor.execute(query_set_cost,[g_mid_low])
 
     if len(g_low) > 0:
-        query_set_cost = "UPDATE buffer_geometry_table SET to_cost = 16.0 WHERE gid IN %s"
+        query_set_cost = "UPDATE buffer_geometry_table SET to_cost = 1.0 WHERE gid IN %s"
         posgres_cursor.execute(query_set_cost,[g_low])
 
 
@@ -912,12 +916,6 @@ def get_route_edges_given_start_end_on_pollution(source,target,psgres_cursor):
     #                     "x1, y1, x2, y2 FROM buffer_geometry_table',%s,%s, false, false)"
     #
     # psgres_cursor.execute(query_route_astar,(source,target))
-# query_route_dijkstra = "SELECT seq, id1 AS node, id2 AS edge, cost FROM pgr_dijkstra('SELECT gid AS id, source::integer,  target::integer, length::double precision AS cost FROM ways',%d, %d, false, false)"%(source,target)
-# query_route = query_route_dijkstra
-#
-# query_route_astar = "SELECT DISTINCT ON (seq) seq, id1 AS node, id2 AS edge, cost FROM pgr_astar('SELECT gid AS id,source::integer,target::integer,length::double precision AS cost,x1, y1, x2, y2 FROM ways',%d,%d, false, false)"%(source,target)
-# query_route_astar = "SELECT seq, id1 AS node, id2 AS edge, cost FROM pgr_astar('SELECT gid AS id,source::integer,target::integer,length::double precision AS cost,x1, y1, x2, y2 FROM ways',%d,%d, false, false)"%(source,target)
-# query_route = query_route_astar
 
 # psgres_cursor.execute(query_route)
     rows = psgres_cursor.fetchall()
@@ -939,33 +937,6 @@ def get_route_edges_given_start_end_on_pollution(source,target,psgres_cursor):
 
     return edges_tuples
 
-# def json_encode(route):
-#     route_dict = {}
-#
-#     for point_seq in range(0,len(route)):
-#         route_dict[point_seq]=route[point_seq]
-#
-#     data_string = json.dumps(route_dict)
-#     return data_string
-#     # print(data_string)
-
-# def get_pollution_from_last_month():
-#     print("hello")
-#
-# def get_pollution_from_last_week():
-#     print("hello")
-#
-# def get_pollution_from_last_day():
-#     print("hello")
-#
-# def get_pollution_from_last_month_given_time():
-#     print("hello")
-#
-# def get_pollution_from_last_week_given_time():
-#     print("hello")
-#
-# def get_pollution_from_last_day_given_time():
-#     print("hello")
 
 def main_program(start,end):
 
@@ -1044,8 +1015,6 @@ def main_program(start,end):
     psgres_connection.close()
     sql_connection.close()
 
-    # print("Execution time= %f"%(time.time()-start_time))
-    # return coords_route
     return coord_pollution_length
 
 if __name__=="__main__":
@@ -1057,7 +1026,5 @@ if __name__=="__main__":
     # end = [-38.126503, 145.189237]
 
     start = [-37.805089, 144.950756]
-    # -37.759767, 144.904212
-    # end = [-37.759767, 144.904212]
-    end = [-37.798444, 144.965790]
+    end = [-37.759767, 144.904212]
     main_program(start,end)
