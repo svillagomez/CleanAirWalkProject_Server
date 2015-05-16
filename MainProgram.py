@@ -798,41 +798,6 @@ def update_cost_column_in_buffer(gidAndPollution_tuples,posgres_cursor,postgres_
         query_set_cost = "UPDATE buffer_geometry_table SET to_cost = 1.0 WHERE gid IN %s"
         posgres_cursor.execute(query_set_cost,[g_low])
 
-
-
-    # retrive = "SELECT gid,to_cost FROM buffer_geometry_table as tabla ORDER BY tabla.gid ASC"
-    # posgres_cursor.execute(retrive)
-    # data = posgres_cursor.fetchall()
-    # print("TOATL DEN BUFFER table = %d"% (len(data)))
-
-
-    # Source = 9141
-    # Target = 180696
-
-    # por_la_enesima = "SELECT source,target FROM buffer_geometry_table WHERE target in(180696)"
-    # posgres_cursor.execute(por_la_enesima)
-    # data = posgres_cursor.fetchall()
-
-    # print(len(data))
-    # print(data)
-
-    # postgres_connection.commit()
-
-    # for contador in range(0,len(todos)):
-    #     todos[contador][POLLUTION_AVE_INDEX]=sorted_values[contador][1]
-    #     print(todos[contador])
-
-    # 0.024108
-    # query_set_cost = "UPDATE bounding_box_table SET to_cost = %s WHERE gid = %s"
-    # posgres_cursor.executemany(query_set_cost,(what))
-    #
-    # no_se_vale = "SELECT * FROM bounding_box_table"
-    # posgres_cursor.execute(no_se_vale)
-    # print(posgres_cursor.fetchall())
-    # postgres_connection.commit()
-    # endtt = time.time()
-    # print("comparing= %f"%(endtt-stt))
-
 def get_route_edges_given_start_end_on_pollution(source,target,psgres_cursor):
 
     ch = "SELECT source,target FROM buffer_geometry_table"
@@ -844,22 +809,6 @@ def get_route_edges_given_start_end_on_pollution(source,target,psgres_cursor):
     for item in ora:
         all_source.append(item[0])
         all_target.append(item[1])
-        # print("Source = %d  target = %d"%(item[0],item[1])
-        # print()
-
-    # query_borrar = "DELETE FROM buffer_geometry_table WHERE source NOT IN %s"
-    # psgres_cursor.execute(query_borrar,[tuple(all_target)])
-
-
-    # query_borrar_dos = "DELETE FROM buffer_geometry_table WHERE target NOT IN %s"
-    # psgres_cursor.execute(query_borrar_dos,[tuple(all_source)])
-
-
-
-    # print("EN LA GEOMETRY EN get_route_edges_given_start_end_on_pollution: cuantos = %d" %( len(ora)))
-    # for item in ora:
-    #     print(item)
-        # print(ora)
 
     # dos_query = "SELECT * FROM buffer_geometry_table WHERE target = 120048"
     dos_query = "SELECT * FROM buffer_geometry_table"
@@ -1003,7 +952,7 @@ def main_program(start,end):
 
     new_route = get_route_edges_given_start_end_on_pollution(source,target,psgres_cursor)
 
-    display_lat_lon_given_edges_gid(new_route,False,psgres_cursor)
+    # display_lat_lon_given_edges_gid(new_route,False,psgres_cursor)
 
     # coords_route = get_lat_lon_given_id(new_route,True,psgres_cursor)
     coords_route = get_lat_lon_given_id(new_route,psgres_cursor)
