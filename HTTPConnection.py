@@ -1,12 +1,9 @@
 __author__ = 'santiago'
 from BaseHTTPServer import BaseHTTPRequestHandler, HTTPServer
-import os
 from MainProgram import main_program
 from MainProgram import get_max_pollution_value
 from MigrateData import update
-import time
 import urlparse
-# from urlparse import urlparse
 
 import json
 
@@ -18,23 +15,22 @@ class HttpRequestHandler(BaseHTTPRequestHandler):
         if 'start=' in self.path:
             start,end = my_parser.parse_url_params(self.path)
             route = main_program(start,end)
-            my_encoder = route_json_encoder()
-            coord_json = my_encoder.encode(route)
+            my_encoder = Route_json_encoder()
+            coord_json = my_encoder._encode(route)
             self.send_response(200,coord_json)
         elif 'maxValue=' in self.path:
             ret_val = get_max_pollution_value()
-            my_encoder = route_json_encoder()
-            max_val_json = my_encoder.encode(ret_val)
+            my_encoder = Route_json_encoder()
+            max_val_json = my_encoder._encode(ret_val)
             self.send_response(200,max_val_json)
 
         update()
 
-class route_json_encoder():
+class Route_json_encoder():
     def __init__(self):
-        # print("HELLO")
         pass
 
-    def encode(self, route):
+    def _encode(self, route):
         route_dict = {}
 
         for point_seq in range(0,len(route)):
@@ -42,12 +38,14 @@ class route_json_encoder():
 
         data_string = json.dumps(route_dict)
         return data_string
-        # print(data_string)
 
 class ParamParser():
-    def parse_url_params(self,path):
+    def __init__(self):
+        pass
+
+    def parse_url_params(self, path):
         if '?' in path:
-            path,tmp = path.split('?',1)
+            path,tmp = path.split('?', 1)
             qs = urlparse.parse_qs(tmp)
             start_str = qs['start']
             end_str = qs['end']
@@ -60,16 +58,15 @@ def run():
     HOST_NAME = ""
     PORT = 5678
     server_add = (HOST_NAME, PORT)
-    httpserv = HTTPServer(server_add, HttpRequestHandler)
+    httpserver = HTTPServer(server_add, HttpRequestHandler)
 
     try:
-        httpserv.serve_forever()
+        httpserver.serve_forever()
     except KeyboardInterrupt:
-        httpserv.shutdown()
-        httpserv.server_close()
-    httpserv.shutdown()
-    httpserv.server_close()
+        httpserver.shutdown()
+        httpserver.server_close()
+    httpserver.shutdown()
+    httpserver.server_close()
 
 if __name__ == '__main__':
     run()
-    

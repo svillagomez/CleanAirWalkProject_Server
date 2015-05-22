@@ -599,8 +599,6 @@ def update_cost_column_in_buffer(gidAndPollution_tuples,posgres_cursor,postgres_
 
     # http://initd.org/psycopg/docs/usage.html
 
-    stt = time.time()
-
     POLLUTION_AVE_INDEX = 4
     test_query = "SELECT gid,to_cost FROM buffer_geometry_table as alias ORDER BY alias.gid ASC"
     posgres_cursor.execute(test_query)
