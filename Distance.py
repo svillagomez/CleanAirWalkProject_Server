@@ -10,8 +10,6 @@ def expand_box(lat1, long1, lat2, long2):
 
     degrees_to_radians = math.pi/180.0
 
-    # print("%s,%s,%s,%s"%(lat1,long1,lat2,long2))
-
     # km
     distance = 0.8
 
@@ -32,7 +30,5 @@ def expand_box(lat1, long1, lat2, long2):
                         (180/math.pi)/math.cos(lat2*math.pi/180)
         new_left = long1 - (distance/EARTH_RADIUS)*\
                         (180/math.pi)/math.cos(lat1*math.pi/180)
-
-    # print("%s,%s,%s,%s"%(new_left,new_right,new_up,new_down))
 
     return (new_left,new_right,new_up,new_down)
