@@ -50,14 +50,12 @@ def create_bigger_bounding_box_with_astar(source,target,CONST,psgres_cursor):
         coordinates[CONST.LAT_MAX_INDEX] = max(each[4],each[5])
         coordinates[CONST.LAT_MIN_INDEX] = min(each[6],each[7])
 
-    # print("Coord bigger smaller box=",coordinates)
-    """EXPAND THE BOUNDING BOX"""
+    #------ EXPAND THE BOUNDING BOX
     coordinates[CONST.LONG_MIN_INDEX], coordinates[CONST.LONG_MAX_INDEX],\
     coordinates[CONST.LAT_MAX_INDEX],coordinates[CONST.LAT_MIN_INDEX] =\
     Distance.expand_box(coordinates[CONST.LAT_MIN_INDEX],coordinates[CONST.LONG_MIN_INDEX],
                      coordinates[CONST.LAT_MAX_INDEX],coordinates[CONST.LONG_MAX_INDEX])
-    """EXPAND THE BOUNDING BOX"""
-    # print("Coord bigger bounding box=",coordinates)
+    #---------------------------------------------------------------------------------------
 
     query_drop = "DROP TABLE IF EXISTS partial_result"
     psgres_cursor.execute(query_drop)
@@ -78,13 +76,12 @@ def calculate_bigger_bounding_box_given_route_gids(edges_tuples,CONST,psgres_cur
         coordinates[CONST.LAT_MAX_INDEX] = max(each[4],each[5])
         coordinates[CONST.LAT_MIN_INDEX] = min(each[6],each[7])
 
-    # print("Coord bigger smaller box=",coordinates)
-    """EXPAND THE BOUNDING BOX"""
+    #-------------------------- EXPAND THE BOUNDING BOX-------------------------------------
     coordinates[CONST.LONG_MIN_INDEX], coordinates[CONST.LONG_MAX_INDEX],\
     coordinates[CONST.LAT_MAX_INDEX],coordinates[CONST.LAT_MIN_INDEX] =\
     Distance.expand_box(coordinates[CONST.LAT_MIN_INDEX],coordinates[CONST.LONG_MIN_INDEX],
                      coordinates[CONST.LAT_MAX_INDEX],coordinates[CONST.LONG_MAX_INDEX])
-    """EXPAND THE BOUNDING BOX"""
+    # --------------------------------------------------------------------------------------
 
     return coordinates
 
@@ -109,7 +106,6 @@ def get_edges_id_inside_bounding_box(coordinates,CONST,psgres_cursor):
         edge_ids.append(row[0])
 
     tuples_edge_ids = tuple(edge_ids)
-
 
     return tuples_edge_ids
 
@@ -154,7 +150,7 @@ def correct_pair(first_pair,t1,t2):
         elif which == 3:
             t2 = invert_ends(t2)
     else:
-        # we assume the first point is in the correct order
+        #----- Assume the first point is in the correct order
         if which == 3:
             t2 = invert_ends(t2)
     return t1,t2
@@ -267,7 +263,6 @@ def get_lat_lon_pollution_given_id(tuples_edge_ids,gid_with_pollutionAverage_tup
     return ret_val
 
 def get_lat_lon_pollution_given_id(tuples_edge_ids,gid_with_pollutionAverage_tuples,psgres_cursor):
-    # if do_order == True:
     query = "SELECT y1,x1,y2,x2,gid FROM ways WHERE gid in %s"
     psgres_cursor.execute(query,[tuples_edge_ids])
     data = psgres_cursor.fetchall()
@@ -599,10 +594,6 @@ def update_cost_column_in_buffer(gidAndPollution_tuples,posgres_cursor,postgres_
     sorted_values = sort_tuples(gidAndPollution_tuples)
 
     g_low,g_mid_low,g_mid_high,g_high = classify_ids_into_ranks(sorted_values)
-
-
-
-
 
     # http://stackoverflow.com/questions/8134602/psycopg2-insert-multiple-rows-with-one-query
 
