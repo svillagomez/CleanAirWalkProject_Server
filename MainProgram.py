@@ -115,31 +115,30 @@ def diff_y1_x1(p1,p2):
     return ans
 
 def calc_ends_diffs(t1,t2):
-
     dict_ans = {}
     counter = 0
-    for i in range(0,3,2):
-        for j in range(0,3,2):
+    for i in range(0, 3, 2):
+        for j in range(0, 3, 2):
             p1 = []
             p1.append(t1[i])
             p1.append(t1[i+1])
             p2 = []
             p2.append(t2[j])
             p2.append(t2[j+1])
-            dict_ans[counter]=diff_y1_x1(p1,p2)
-            counter+=1
+            dict_ans[counter] = diff_y1_x1(p1,p2)
+            counter += 1
     return dict_ans
 
 def invert_ends(t1):
     # make a copy because t1 might have more tha 4 elements inside
     partial = t1
-    partial[0]=(t1[2])
-    partial[1]=(t1[3])
-    partial[2]=(t1[0])
-    partial[3]=(t1[1])
+    partial[0] = (t1[2])
+    partial[1] = (t1[3])
+    partial[2] = (t1[0])
+    partial[3] = (t1[1])
     return partial
 
-def correct_pair(first_pair,t1,t2):
+def correct_pair(first_pair, t1, t2):
     dict_values = calc_ends_diffs(t1,t2)
     which = min(dict_values, key=dict_values.get)
     if first_pair == True:
@@ -153,7 +152,7 @@ def correct_pair(first_pair,t1,t2):
         #----- Assume the first point is in the correct order
         if which == 3:
             t2 = invert_ends(t2)
-    return t1,t2
+    return t1, t2
 
 def display_lat_lon_given_edges_gid(tuples_edge_ids,order,psgres_cursor):
 
@@ -189,7 +188,7 @@ def get_lat_lon_given_id(tuples_edge_ids,psgres_cursor):
     dict_lat_lon_id ={}
     # keep the same order as the imput gid_tuples
     for item in data:
-        dict_lat_lon_id[item[4]]=[item[0],item[1],item[2],item[3]]
+        dict_lat_lon_id[item[4]] = [item[0], item[1], item[2], item[3]]
 
     # keep the same order
     startAndEnd_coords_dict_gid = OrderedDict()
@@ -207,21 +206,21 @@ def get_lat_lon_given_id(tuples_edge_ids,psgres_cursor):
         elif counter == 2:
             first_edge = edges[0]
             second_edge = edges[1]
-            first_edge,second_edge = correct_pair(True,first_edge,second_edge)
+            first_edge,second_edge = correct_pair(True, first_edge, second_edge)
             edge = second_edge
             ret_val.append(first_edge)
             ret_val.append(second_edge)
         elif counter >2:
             next_edge = startAndEnd_coords_dict_gid[item]
-            edge,next_edge = correct_pair(False,edge,next_edge)
+            edge,next_edge = correct_pair(False, edge, next_edge)
             ret_val.append(next_edge)
             edge = next_edge
         counter += 1
     return ret_val
 
 
-def get_lat_lon_pollution_given_id(tuples_edge_ids,gid_with_pollutionAverage_tuples,psgres_cursor):
-    # if do_order == True:
+def get_lat_lon_pollution_given_id(tuples_edge_ids, gid_with_pollutionAverage_tuples, psgres_cursor):
+
     query = "SELECT y1,x1,y2,x2,gid FROM ways WHERE gid in %s"
     psgres_cursor.execute(query,[tuples_edge_ids])
     data = psgres_cursor.fetchall()
@@ -234,12 +233,12 @@ def get_lat_lon_pollution_given_id(tuples_edge_ids,gid_with_pollutionAverage_tup
     for item in data:
         # the gid must be the key for the dictionary. is located at position 4
         key = item[4]
-        dict_lat_lon_id[key]=[item[0],item[1],item[2],item[3],gid_with_pollutionAverage_dict[key]]
+        dict_lat_lon_id[key]=[item[0], item[1], item[2], item[3], gid_with_pollutionAverage_dict[key]]
 
     # keep the same order
     startAndEnd_coords_dict_gid = OrderedDict()
     for each in tuples_edge_ids:
-        startAndEnd_coords_dict_gid[each]=dict_lat_lon_id[int(each)]
+        startAndEnd_coords_dict_gid[each] = dict_lat_lon_id[int(each)]
 
     ret_val = []
     edges = []
@@ -604,9 +603,9 @@ def update_cost_column_in_buffer(gidAndPollution_tuples,posgres_cursor,postgres_
     posgres_cursor.execute(test_query)
     todos = posgres_cursor.fetchall()
 
-    HIGH_COST = 1.6
-    MIDDLE_COST = 1.4
-    LOW_COST = 1.2
+    HIGH_COST = 8.0
+    MIDDLE_COST = 6.0
+    LOW_COST = 3.0
     NO_COST = 1.0
 
 
