@@ -489,22 +489,22 @@ class RouteClass():
         self.posgres_cursor.execute(test_query)
         todos = self.posgres_cursor.fetchall()
 
-        HIGH_COST = 8.0
-        MIDDLE_COST = 6.0
-        LOW_COST = 3.0
+        HIGH_COST = 4.0
+        MIDDLE_COST = 3.0
+        LOW_COST = 2.0
         NO_COST = 1.0
 
 
         if len(g_high) > 0:
-            query_set_cost = "UPDATE buffer_geometry_table SET to_cost = 8.0 WHERE gid IN %s"
+            query_set_cost = "UPDATE buffer_geometry_table SET to_cost = 4.0 WHERE gid IN %s"
             self.posgres_cursor.execute(query_set_cost,[g_high])
 
         if len(g_mid_high) > 0:
-            query_set_cost = "UPDATE buffer_geometry_table SET to_cost = 6.0 WHERE gid IN %s"
+            query_set_cost = "UPDATE buffer_geometry_table SET to_cost = 3.0 WHERE gid IN %s"
             self.posgres_cursor.execute(query_set_cost,[g_mid_high])
 
         if len(g_mid_low) > 0:
-            query_set_cost = "UPDATE buffer_geometry_table SET to_cost = 3.0 WHERE gid IN %s"
+            query_set_cost = "UPDATE buffer_geometry_table SET to_cost = 2.0 WHERE gid IN %s"
             self.posgres_cursor.execute(query_set_cost,[g_mid_low])
 
         if len(g_low) > 0:
