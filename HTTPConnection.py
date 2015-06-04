@@ -26,6 +26,9 @@ class HttpRequestHandler(BaseHTTPRequestHandler):
 
         update()
 
+    def log_message(self, format, *args):
+        return 
+
 class Route_json_encoder():
     def __init__(self):
         pass

@@ -8,7 +8,8 @@ from itertools import groupby
 from operator import itemgetter
 from collections import OrderedDict
 
-
+# Location: class
+# Usage: It is intended for retrieving information regarding a tweet location
 class Utils(object):
     @staticmethod
     def diff_y1_x1(p1, p2):
@@ -121,7 +122,7 @@ class RouteClass():
         self.posgres_cursor = postgres_cursor
         # self.posgres_connection = posgres_connection
 
-    def get_route_edges_given_start_end(self, source, target):
+    def get_route_edges_given_source_target(self, source, target):
         query_route_astar = "SELECT DISTINCT ON (seq) seq, id1 AS node, id2 AS edge, cost, b.the_geom FROM pgr_astar(" \
                         "'SELECT gid AS id,source::integer,target::integer,length::double precision AS cost," \
                         "x1, y1, x2, y2 FROM ways',%s,%s, false, false) a LEFT JOIN ways b ON (a.id2 = b.gid) ORDER BY seq"
@@ -524,6 +525,10 @@ def get_max_pollution_value():
     return ret_val
 
 
+# function: add_region_field
+    # description: add the suburb information taking into account the location values inside a twee
+    # return: a tweet with suburb field
+    # parameters: single tweet
 
 def main_program(start, end):
     start_lat = start[0]
@@ -536,27 +541,27 @@ def main_program(start, end):
 
     postgres_cursor, postgres_connection = db_connection.connect_to_postgres_db()
 
-    r_util = RouteClass(postgres_connection,postgres_cursor)
+    route_util = RouteClass(postgres_connection,postgres_cursor)
 
-    source = r_util.find_nearest_vertex_id(start_lat, start_lon)
+    source = route_util.find_nearest_vertex_id(start_lat, start_lon)
 
-    target = r_util.find_nearest_vertex_id(end_lat, end_lon)
+    target = route_util.find_nearest_vertex_id(end_lat, end_lon)
 
-    route_edge_ids, seq_and_geom_dict = r_util.get_route_edges_given_start_end(source, target)
+    route_edge_ids, seq_and_geom_dict = route_util.get_route_edges_given_source_target(source, target)
 
-    coordinates = r_util.calculate_bigger_bounding_box_given_route_gids(route_edge_ids, CONST)
+    coordinates = route_util.calculate_bigger_bounding_box_given_route_gids(route_edge_ids, CONST)
 
-    r_util.get_edges_id_inside_bounding_box(coordinates, CONST)
+    route_util.get_edges_id_inside_bounding_box(coordinates, CONST)
 
-    all_ids = r_util.construct_buffer_following_linestring(route_edge_ids, seq_and_geom_dict)
+    all_ids = route_util.construct_buffer_following_linestring(route_edge_ids, seq_and_geom_dict)
 
-    gid_with_pollutionAverage_tuples = r_util.average_pollution_of_given_ids(all_ids)
+    gid_with_pollutionAverage_tuples = route_util.average_pollution_of_given_ids(all_ids)
 
-    r_util.update_cost_column_in_buffer(gid_with_pollutionAverage_tuples)
+    route_util.update_cost_column_in_buffer(gid_with_pollutionAverage_tuples)
 
-    new_route = r_util.get_route_edges_given_start_end_on_pollution(source, target)
+    new_route = route_util.get_route_edges_given_start_end_on_pollution(source, target)
 
-    coord_pollution_length = r_util.get_lat_lon_pollution_length_given_id(new_route, gid_with_pollutionAverage_tuples)
+    coord_pollution_length = route_util.get_lat_lon_pollution_length_given_id(new_route, gid_with_pollutionAverage_tuples)
 
     postgres_cursor.close()
     postgres_connection.close()
@@ -564,6 +569,7 @@ def main_program(start, end):
     return coord_pollution_length
 
 if __name__=="__main__":
-    start = [-37.805598, 144.963075]
+    # start = [-37.805598, 144.963075]
+    start = [-37.514217, 144.803413]
     end = [-37.797205, 144.964470]
     main_program(start, end)
