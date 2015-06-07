@@ -16,6 +16,12 @@ class Utils(object):
         ans = pow(((pow((p1[0] - p2[0]),2))+(pow((p1[1] - p2[1]),2))), 0.5)
         return ans
 
+
+    # function: calc_ends_diffs
+    # description: this function calculates the distance difference of all combinations of ends given two edges
+    # return: dict_ans => dictrionary with teh calculated difference values
+    # parameters: t1 => an edge with latitude longitude values and others
+    #             t1 => an edge with latitude longitude values and others
     @staticmethod
     def calc_ends_diffs(t1, t2):
         dict_ans = {}
@@ -32,6 +38,11 @@ class Utils(object):
                 counter += 1
         return dict_ans
 
+
+    # function: invert_ends
+    # description: this function interchange the ends (latitude and longitude )of an edge
+    # return: partial => inverted edge (if needed)
+    # parameters: t1 => an edge with latitude longitude values and others
     @staticmethod
     def invert_ends(t1):
         # make a copy because t1 might have more tha 4 elements inside
@@ -42,6 +53,14 @@ class Utils(object):
         partial[3] = (t1[1])
         return partial
 
+
+    # function: correct_pair
+    # description: this function interchange the ends of and edge if it is not in concordance with the prior edge
+    # return: t1 => fixed edge with latitude and longitude values [0-3]
+    #         t2 => fixed  edge with latitude and longitude values [0-3]
+    # parameters: is_first_pair => boolean to indicate if is the very first edge
+    #             t1 => an edge with latitude and longitude values [0-3]
+    #             t2 => an edge with latitude and longitude values [0-3]
     @staticmethod
     def correct_pair(is_first_pair, t1, t2):
         dict_values = Utils.calc_ends_diffs(t1,t2)
@@ -59,14 +78,28 @@ class Utils(object):
                 t2 = Utils.invert_ends(t2)
         return t1, t2
 
+    # function: getKey
+    # description: get the first item as key for further process
+    # return: item[0] => the first item on the tuple given
+    # parameters: item => single tuple item
     @staticmethod
     def getKey(item):
         return item[0]
 
+
+    # function: sort_tuples
+    # description: sort the given parameter according to the key (Id)
+    # return: tuples => sorted elements by key
+    # parameters: tuples => unsorted tuples of Ids and pollution
     @staticmethod
     def sort_tuples(tuples):
         return sorted(tuples,key=Utils.getKey)
 
+
+    # function: classify_ids_into_ranks
+    # description: classify the given edges Ids into 4 groups according with the pollution values associated with them
+    # return: tuples of the four groups: group_lowest, group_mid_low, group_mid_high, group_highest
+    # parameters: sorted_tuples => sorted Ids along with pollution values associated
     @staticmethod
     def classify_ids_into_ranks(sorted_tuples):
         max_value = get_max_pollution_value()[0]
@@ -92,17 +125,22 @@ class Utils(object):
 
         return tuple(group_lowest),tuple(group_mid_low),tuple(group_mid_high),tuple(group_highest)
 
+    # function: display_lat_lon_given_edges_gid
+    # description: help function used to print the latitude and longitude of given edges Ids
+    # return: none
+    # parameters: tuples_edge_ids => tuples that compose a route
+    #              postgresql_cursor => a cursor to operate over the DB
     @staticmethod
-    def display_lat_lon_given_edges_gid(tuples_edge_ids,order,psgres_cursor):
+    def display_lat_lon_given_edges_gid(tuples_edge_ids,order, postgresql_cursor):
 
         if order == True:
             query = "SELECT DISTINCT y1,x1,y2,x2,gid FROM ways WHERE gid in %s ORDER BY y1,x1"
-            psgres_cursor.execute(query,[tuples_edge_ids])
+            postgresql_cursor.execute(query,[tuples_edge_ids])
         else:
             query = "SELECT DISTINCT y1,x1,y2,x2,gid FROM ways WHERE gid in %s"
-            psgres_cursor.execute(query,[tuples_edge_ids])
+            postgresql_cursor.execute(query,[tuples_edge_ids])
 
-        data = psgres_cursor.fetchall()
+        data = postgresql_cursor.fetchall()
 
         dict_lat_lon_id = {}
         # keep the same order as the imput gid_tuples
@@ -117,11 +155,19 @@ class Utils(object):
             print("%f,%f"%(dict_lat_lon_id[int(each)][0],dict_lat_lon_id[int(each)][1]))
             print("%f,%f"%(dict_lat_lon_id[int(each)][2],dict_lat_lon_id[int(each)][3]))
 
+
+# class: RouteClass
+# Usage: handles most of routing operations to process a request and deliver a route
 class RouteClass():
     def __init__(self, posgres_connection, postgres_cursor):
         self.posgres_cursor = postgres_cursor
         # self.posgres_connection = posgres_connection
 
+    # function: get_route_edges_given_source_target
+    # description: this function calculates routes without considering a cost
+    # return: edges_tuples => tuples that compose a route
+    # parameters: source => Id of the start point
+    #             target => Id of the end point
     def get_route_edges_given_source_target(self, source, target):
         query_route_astar = "SELECT DISTINCT ON (seq) seq, id1 AS node, id2 AS edge, cost, b.the_geom FROM pgr_astar(" \
                         "'SELECT gid AS id,source::integer,target::integer,length::double precision AS cost," \
@@ -149,6 +195,14 @@ class RouteClass():
 
         return edges_tuples, seq_and_geom_dict
 
+
+    # function: get_route_edges_given_start_end_on_pollution
+    # description: this function calculates routes taking into account cost(associated with pollution) from  'ways' table
+    # return: edges_tuples => tuples that compose a route
+    # parameters: source => Id of the start point
+    #             target => Id of the end point
+    #             coordinates => extreme points that define a bounding box
+    # Comment: not in use
     def get_route_edges_given_start_end_within_bounding_box_cost(self, source, target, coordinates):
         query_route_astar = "SELECT DISTINCT ON (seq) seq, id1 AS node, id2 AS edge, cost, b.the_geom FROM pgr_astar(" \
                             "'SELECT gid AS id,source::integer,target::integer,(length::double precision*to_cost::double precision) AS cost," \
@@ -172,21 +226,13 @@ class RouteClass():
 
         return edges_tuples
 
+
+    # function: get_route_edges_given_start_end_on_pollution
+    # description: this function calculates routes taking into account cost(associated with pollution) from  buffer_geometry_table
+    # return: edges_tuples => tuples that compose a route
+    # parameters: source => Id of the start point
+    #             target => Id of the end point
     def get_route_edges_given_start_end_on_pollution(self, source, target):
-
-        ch = "SELECT source,target FROM buffer_geometry_table"
-        self.posgres_cursor.execute(ch)
-        ora = self.posgres_cursor.fetchall()
-
-        all_source = []
-        all_target = []
-        for item in ora:
-            all_source.append(item[0])
-            all_target.append(item[1])
-
-        dos_query = "SELECT * FROM buffer_geometry_table"
-        self.posgres_cursor.execute(dos_query)
-        datos = self.posgres_cursor.fetchall()
 
         query_route_astar = "SELECT DISTINCT ON (seq) seq, id1 AS node, id2 AS edge, cost FROM pgr_astar(" \
                             "'SELECT gid AS id,source::integer,target::integer,(length::double precision)*(to_cost::double precision) AS cost," \
@@ -208,6 +254,12 @@ class RouteClass():
 
         return edges_tuples
 
+
+    # function: calculate_bigger_bounding_box_given_route_gids
+    # description: calculate the vertices of a bounding box that encloses a route by adding some constant value
+    # return: coordinates => a list containing the coordinates that define the bounding box
+    # parameters: edges_tuples => the Ids of all edges composing a route
+    #             CONST => some constant values defined in the Constant.py module
     def calculate_bigger_bounding_box_given_route_gids(self, edges_tuples, CONST):
 
         coordinates = [0.0]*4
@@ -231,6 +283,12 @@ class RouteClass():
 
         return coordinates
 
+
+    # function: get_edges_id_inside_bounding_box
+    # description: filter the records of 'ways' table using a bounding box defined with ST_MakeEnvelope
+    # return: tuples containing all Ids that falls inside bounding box
+    # parameters: coordinates => a array of the extreme coordinate values (bounding box)
+    #             CONST => some constant values defined in the Constant.py module
     def get_edges_id_inside_bounding_box(self, coordinates,CONST):
 
         query_nodes_inside_bounding = "SELECT gid,source,target,length,to_cost,x1,y1,x2,y2,the_geom INTO bounding_box_table " \
@@ -254,6 +312,12 @@ class RouteClass():
 
         return tuples_edge_ids
 
+
+    # function: construct_buffer_following_linestring
+    # description: filter the records of bounding_box_table in a buffer geometry manner constructed by following a route
+    # return: tuples containing all Ids that falls inside the buffer geometry
+    # parameters: tuples_edge_ids => tuples edges Ids (route)
+    #           seq_and_geom_dict => sequence segments composing a route
     def construct_buffer_following_linestring(self, tuples_edge_ids,seq_and_geom_dict):
         seq_and_geom_dict.pop(len(seq_and_geom_dict)-1)
 
@@ -325,6 +389,11 @@ class RouteClass():
 
         return tuples_edge_ids
 
+
+    # function: average_pollution_of_given_ids
+    # description: find the averaged pollution values of segments given their Ids
+    # return: a list containing Ids and the associated pollution value
+    # parameters: edge_ids => tuples containing edges Ids
     def average_pollution_of_given_ids(self, edge_ids):
         query_value = "SELECT gid, AVG(measured_value) as measured_value FROM measurements WHERE gid IN %s GROUP BY gid"
         self.posgres_cursor.execute(query_value,[edge_ids])
@@ -341,6 +410,11 @@ class RouteClass():
 
         return gidAndValue
 
+
+    # function: find_nearest_vertex_id
+    # description: find the nearest vertex given a latitude and longitude coordinates
+    # return: the id of the nearest vertex
+    # parameters: double-type latitude and longitude coordinates
     def find_nearest_vertex_id(self,lat,lon):
         query_start = "SELECT id::integer FROM ways_vertices_pgr " \
                       "ORDER BY the_geom <-> ST_GeometryFromText('POINT(%s %s)') LIMIT 1"
@@ -352,7 +426,12 @@ class RouteClass():
 
         return edge_id
 
-    # Leave this method 'cause be useful
+
+    # function: get_lat_lon_given_id
+    # description: query database for coordinates of a route given ids composing it
+    # return: a list containing the route segments coordinates of each
+    # parameters: tuples_edge_id_sequence  => sequence of route's ids
+    # comments: Not in use. Method could be useful for future work
     def get_lat_lon_given_id(self, tuples_edge_ids):
         # if do_order == True:
         query = "SELECT y1,x1,y2,x2,gid FROM ways WHERE gid in %s"
@@ -392,8 +471,9 @@ class RouteClass():
             counter += 1
         return ret_val
 
+
     # function: get_lat_lon_pollution_given_id
-    # description: query database for coordinates, pollution of a route given ids composing it
+    # description: query database for coordinates and pollution of a route given ids composing it
     # return: a list containing the route segments coordinates plus the pollution of each segment
     # parameters: tuples_edge_id_sequence  => sequence of route's ids
     #             gid_with_pollutionAverage_tuples => route's ids with pollution values
