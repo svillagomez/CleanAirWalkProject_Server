@@ -1,5 +1,7 @@
 __author__ = 'santiago'
 
+
+
 LAT_MIN_INDEX = 0
 LAT_MAX_INDEX = 2
 LONG_MIN_INDEX = 1

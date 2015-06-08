@@ -6,6 +6,10 @@ from Constants import EARTH_RADIUS
 import math
 """calcu;ate vertices of bounding box or envelope adding some distance"""
 
+# function: expand_box
+# description: create a bigger bounding box given extrem parameters (smaller bounding box)
+# return: None
+# parameters: lat1, long1, lat2, long2 => coordinate values
 def expand_box(lat1, long1, lat2, long2):
 
     degrees_to_radians = math.pi/180.0

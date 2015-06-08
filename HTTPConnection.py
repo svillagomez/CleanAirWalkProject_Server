@@ -7,9 +7,6 @@ import urlparse
 
 import json
 
-# suponiendo = "/q?lat-37.7999168567061lon144.93830289691687lat-37.80298775026495lon144.94625229388475"
-
-
 # Name = HttpRequestHandler: class
 # Usage: define method to encode routes into JSON
 # Costructor parameters: BaseHTTPRequestHandler => HTTP handler
@@ -35,6 +32,10 @@ class HttpRequestHandler(BaseHTTPRequestHandler):
 
         update()
 
+    # function: log_message
+    # description: discrads logs ( important to run in background)
+    # return: None
+    # parameters: format, *args (
     def log_message(self, format, *args):
         return
 
